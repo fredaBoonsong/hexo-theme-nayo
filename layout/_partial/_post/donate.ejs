@@ -1,0 +1,37 @@
+<% if(theme.donate.enable){  %>
+
+<% var donate = theme.donate %>
+
+
+<span class="donate-btn iconfont icon-donate">
+<<<<<<< HEAD
+<span><%=  __('Donate') %></span>
+=======
+<<<<<<< HEAD
+<span><%=  __('Donate') %></span>
+=======
+
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+</span>
+
+
+<div id="donate-box">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="<%= donate.wechat %>" alt="No donate img !">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="<%= donate.alipay %>" alt="No donate img !">				
+	</div>
+
+	<span class="donate-word slideDownMin"><%- donate.word %></span>
+
+	<div class="donate-list fadeIn">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+<% } %>

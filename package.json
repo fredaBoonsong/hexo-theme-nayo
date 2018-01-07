@@ -1,0 +1,14 @@
+{
+  "name": "hexo-theme-nayo",
+  "version": "1.0", 
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemonreds/hexo-theme-nayo.git"
+  },
+  "author": "synch",
+  "bugs": {
+    "url": "https://github.com/Lemonreds/hexo-theme-nayo/issues"
+  },
+  "homepage": "https://github.com/Lemonreds/hexo-theme-nayo#readme"
+}

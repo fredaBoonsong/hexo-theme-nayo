@@ -1,0 +1,94 @@
+#header nav
+menu:
+  home: /
+  archives: archives
+  categories: categories  
+  tags: tags
+  about: about
+  search: search
+
+# site color [black blue brown purple red green]
+# hope you can submit your color code to me!
+color: black  
+
+#site title
+title: Nayo
+
+#author profile
+profile: 
+  logo: Nayo
+  avatar: /img/header.jpg
+  author: Synch
+  city: GuangZhou
+  country: China
+  descrption: 世界美好,你也是。
+
+#site favicon
+favicon: /img/favicon.png
+
+
+#social link
+social:  
+  github: https://github.com/Lemonreds  
+  zhihu:
+  weibo:
+  segmentfault: 
+  facebook:
+  twitter:
+  instagram:
+  linkedin:
+  others:
+
+
+# toc of post  [true/false]  
+toc:
+    true
+
+# code highlight style
+# normal | night | white
+highlight_theme: 
+    normal
+
+# website analytics 
+baidu_analytics:
+ 636802045446222199ae541e32c8133e 
+google_analytics: 
+
+# busuanzi site count
+busuanzi:
+  true
+
+# valine comment
+leancloud:  
+  comment: true
+  app_id: cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz
+  app_key: oh9tizsnvV2vNvWgqEvoNtQO
+
+#mob share
+mob_share:
+  enable: true
+  app_key: 21d601593a1de
+
+share_item:
+- qq
+- weixin
+- weibo
+- douban
+- facebook
+- twitter
+- tumblr
+- google
+
+#post donate
+donate:
+  enable: true
+  word: 世界美好 你也是
+  wechat: /img/donate1.png
+  alipay: /img/donate2.png
+
+
+#theme version
+version:
+  1.0
+
+#山水一程 三生有幸

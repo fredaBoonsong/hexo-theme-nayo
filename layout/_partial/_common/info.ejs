@@ -1,0 +1,31 @@
+		<% if( post.categories && post.categories.length > 0 ) {%>
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<%- list_categories( post.categories ,{
+					show_count:false,
+					style:'none',
+					separator:" "
+				}) %>
+				</span>
+		
+		<% }%>	
+
+		<% if( post.tags &&  post.tags.length > 0 ) {%>
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<%- list_tags( post.tags ,{
+					show_count:false,
+					style:'none',
+					separator:" "
+				}) %>
+				</span>			
+		<% }%>	
+
+
+		<%  var length = post.content.replace(/<\/?[^>]*>/g, "").replace(/ /g,'').length%>
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		<%= length %>
+		</span>

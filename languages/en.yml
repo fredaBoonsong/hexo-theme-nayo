@@ -1,0 +1,52 @@
+Menu:
+  home: HOME
+  categories: CATEGORIES
+  tags: TAGS
+  archives: ARICHIVES
+  about: ABOUT
+  search: SEARCH
+Page:
+  Archives: Archives
+  Categories: Categories
+  Tags: Tags
+  About: About
+Sidebar:
+  Posts: Posts
+  Categories: Categories
+  Recents: Recents
+  TagCloud: Tags
+  FriendLinks: Friends
+
+Post:
+  Prev: Prev
+  Next: Next
+  
+Paginator: 
+  Prev: Prev
+  Next: Next
+
+
+Contents: Contents
+Read_more: More
+Untitled: Untitled
+<<<<<<< HEAD
+Share: Share
+Donate: Donate
+=======
+<<<<<<< HEAD
+Share: Share
+Donate: Donate
+=======
+
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+
+Comment:
+  Nick_holder: nick
+  Mail_holder: mail
+  Comment_holder: Typing something here.
+  Submit_holder: Submit
+
+Search:
+  Sidebar_words: Search
+  input_words: Typing Something

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <%- partial('_partial/head') %> 
+  <body> 
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+
+<<<<<<< HEAD
+    <div class="container">         
+=======
+<<<<<<< HEAD
+    <div class="container">         
+=======
+     <div class="container">         
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+      
+        <% if (is_post()) { %>
+          <section id="main" ><%-body%></section>   
+          <%- partial('_partial/_post/toc',{post:page}) %>
+        <% } else{ %>
+          <section id="main" class="slideDownMin" ><%-body%></section>   
+        <% }%>
+    </div>        
+
+    
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div> 
+
+    <%- partial('_partial/search-container') %>
+    <%- partial('_partial/slide-menu') %>     
+    <%- partial('_partial/footer') %> 
+    <%- partial('_partial/after-footer') %> 
+  </body>   
+  <%- js('js/animation.js') %>   
+</html>

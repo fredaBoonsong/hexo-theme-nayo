@@ -1,0 +1,14 @@
+<% var profile = theme.profile %>
+
+<div class="profile">
+
+		<img class="avatar no-gallery" src="<%= profile.avatar %>"  alt="NO AVATAR!">
+					
+		<p class="author"><%= profile.author%></p>
+			
+		<div class="social">
+   		<% for (i in theme.social) { %>    	
+		<a href="<%- url_for(theme.social[i]) %>" class="iconfont icon-<%-i%>" target="_blank" title="<%- i %>"></a>
+	    <% } %>
+    	</div>		
+</div>

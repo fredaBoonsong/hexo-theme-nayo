@@ -1,0 +1,88 @@
+
+$border
+  background $white
+  border 1px solid $line-clr 
+  border-radius 3px
+  padding 20px 10px
+
+$oneline
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+
+$block
+  heigth auto
+  margin .8em 0 
+  padding  .6em
+.block
+  @extend $block
+  
+$tags
+  margin 3px 2px
+  padding 4px 12px
+  display inline-block
+  line-height 25px 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> response fontsize
+  font-size 13px
+  border 1px solid  $border-clr 
+  border-radius 999em 
+  &:visited,&:active,&:link
+      color rgba(0,0,0,.65)     
+<<<<<<< HEAD
+=======
+=======
+  font-size 0.825rem
+  border 1px solid  $border-clr 
+  border-radius 999em 
+  &:visited,&:active,&:link
+    color rgba(0,0,0,.7)     
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+  &:hover
+    background rgba(255,255,255,.2)
+    color $thr-clr
+    border 1px solid $thr-clr    
+   
+
+        
+$toRight
+    position relative
+    cursor pointer
+    &:hover 
+        color $thr-clr  
+    &::after
+        content " "
+        width 0
+        height 1.5px
+        background $thr-clr
+        position absolute
+        top 99%
+        right 0
+        transition all .4s                
+    &:hover:after     
+        left 0
+        width  100%
+
+
+absolute-center(width, height = width)  
+  width: width
+  height: height
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: width * -0.5
+  margin-left: height * -0.5
+  
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

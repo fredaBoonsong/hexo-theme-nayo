@@ -1,0 +1,18 @@
+<div class="slideDownMin center">
+
+	<span class="post-title">	
+		<%= page.title|| __('Untitled') %>
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		<%- date(page.date, "YYYY/MM/DD")%> 	
+		</time>
+		
+			<%- partial('_partial/_common/info',{ post:post}) %>		
+	
+	</div> 
+
+</div>

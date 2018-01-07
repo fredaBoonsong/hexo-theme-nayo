@@ -1,0 +1,19 @@
+<article class="article">	
+		
+	   
+	<div class="article-header">
+	    
+	     <a class="article-title"  href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>  
+	       
+		 <%	var date_format = config.date_format %>
+
+		 <time><%= date(post.date, date_format || "YYYY/MM/DD") %> </time>    
+	</div>
+
+
+    <%- partial('_partial/_article/excerpt',{post:post}) %>		
+
+		
+    <a class="article-readmore" href="<%- url_for(post.path) %>"><%= __('Read_more') %></a> 
+    	
+</article>

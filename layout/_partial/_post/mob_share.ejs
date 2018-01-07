@@ -1,0 +1,24 @@
+<% if(theme.mob_share.enable){%>
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=<%- theme.mob_share.app_key %>"></script>
+	
+	<span class="share-btn iconfont icon-share">
+<<<<<<< HEAD
+	<span><%=  __('Share') %></span>
+=======
+<<<<<<< HEAD
+	<span><%=  __('Share') %></span>
+=======
+	
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+	</span>
+
+
+	<div class="-mob-share">
+		<% for ( i in theme.share_item){ %>                  
+            <span class="iconfont fadeIn icon-share-<%-theme.share_item[i]%> -mob-share-<%-theme.share_item[i]%>" title="<%-theme.share_item[i]%>"></span>
+     	<% } %>   
+	</div>
+	
+<%}%>

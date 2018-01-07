@@ -1,0 +1,19 @@
+<% if(post) {%>	
+
+	  <% var  date_format %>
+
+	  <% if (! date_format) {%>
+
+	  	<%  date_format = 'YYYY-MM-DD' %>
+
+	  <% }%>
+
+      <div class="animation-item item slideDownMin">   	
+
+        <span class="item-date"> <%= date(post.date, date_format) %></span>    
+
+        <a class="item-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+
+      </div>
+
+<% } %>

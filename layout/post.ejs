@@ -1,0 +1,22 @@
+<article class="post">
+
+	  
+	<%- partial('_partial/_post/header',{post: page}) %> 
+
+
+	  <div class="post-content slideDownMin">
+	    <% if (page.photos && page.photos.length){ %>
+	        <% for( i in page.photos){%>
+	          <img src="<%- url_for(page.photos[i]) %>">             
+	        <%}%>
+	    <%}%>
+	  <%- page.content %>    
+	  </div>     
+	  
+
+	<%- partial('_partial/_post/footer',{post: page}) %> 
+	<%- partial('_partial/_post/comment') %>	
+
+</article>
+
+<%- js('js/post') %>

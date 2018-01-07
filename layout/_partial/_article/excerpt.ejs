@@ -1,0 +1,18 @@
+<div class="article-excerpt">	
+	
+  <%- partial('_partial/_article/gallery',{post:post}) %>	
+
+	  <% if (post.excerpt) { %>
+
+	  	<%- post.excerpt %>
+
+	   <% } else { %>
+
+	  	<%- post.content %> 
+
+	  <% } %>  
+</div>
+
+<div class="center">
+	<%- partial('_partial/_common/info',{ post:post}) %>		
+</div>

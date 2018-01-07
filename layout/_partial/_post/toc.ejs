@@ -1,0 +1,18 @@
+<% if(theme.toc){  %>
+
+<div id="toc" class="fadeIn">		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span><%= __('Contents')%></span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+<% } %>
+
+<%- js('js/toc.js')%>

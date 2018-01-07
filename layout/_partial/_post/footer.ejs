@@ -1,0 +1,47 @@
+<div class="post-footer">    
+
+  <%- partial('_partial/_post/donate') %> 
+  <%- partial('_partial/_post/mob_share') %>
+
+   <nav class="post-nav">
+
+      
+       <% if (page.prev) { %>
+
+        <% var title = truncate(page.prev.title , {length:60}) %> 
+
+      
+          <a href="<%- url_for(page.prev.path) %>">          
+<<<<<<< HEAD
+            <span class="nav-title" title="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>
+=======
+<<<<<<< HEAD
+            <span class="nav-title" title="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>
+=======
+            <span title="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+          </a>
+    
+      <% } %>
+    
+      <% if (page.next) { %>
+
+         <% var title = truncate(page.next.title, {length:60}) %>
+
+          <a href="<%- url_for(page.next.path) %>">         
+<<<<<<< HEAD
+           <span class="nav-title" title="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
+=======
+<<<<<<< HEAD
+           <span class="nav-title" title="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
+=======
+           <span title="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
+>>>>>>> response fontsize
+>>>>>>> response fontsize
+          </a>
+
+      <% } %>
+
+  </nav>  
+</div>

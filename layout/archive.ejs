@@ -1,0 +1,23 @@
+<section class="block fadeIn">
+
+    <span class="page-title"><%=  __('Page.Archives') %></span>  
+   
+    <% var last %> 
+    <% page.posts.each(function (post) { %>
+      <% var year = post.date.year() %>
+
+        <%if(last != year ){%>   
+
+      		<h3 class="archive-year"><%= year %></h3>          
+
+      	  <% last = year %>	  
+
+		    <%}%>
+
+        <%- partial('_partial/_common/item',{post:post,date_format: 'MM-DD'}) %>       
+
+    <% }) %>
+
+</section>
+
+<%- partial('_partial/paginator') %>
