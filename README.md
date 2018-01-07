@@ -2,7 +2,7 @@
 ### A clean and white theme for Hexo.
 
 ### Demo preview  : [在线预览:synch](http://synch.site)
-### Configuration : [主题详细配置](http://synch.site/2017/11/11/Hexo-theme-Nayo/)
+### Configuration : [主题详细配置](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
 
 # Installation 快速安装
 
