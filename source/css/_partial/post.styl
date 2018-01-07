@@ -25,6 +25,7 @@
 .donate-btn,.share-btn 
   @extend $tags
   cursor pointer
+  padding 4px 12px
   border-radius 50%  
 //-------------donate
 #donate-box  
@@ -104,22 +105,6 @@
       color $thr-clr      
    
 
-//
-// widgets
-// 
-.post-widget
-  margin 7em 0 
-  text-align center
-.post-widget-tag  a
-  @extend $tags  
-  font-size .9em    
-.post-widget-title 
-  display block
-  font-size 14px 
-  margin-bottom 30px 
-  font-weight 300
-  &:hover 
-     color $thr-clr
      
 //
 // comment
@@ -128,28 +113,10 @@
     margin 1rem 0 4rem
     padding-bottom 1rem
     overflow hidden    
-    border-bottom 1px solid #eee       
-    text-align center
-.post-nav span
-    @extend $tags
-    font-size 0.825rem
-    padding 6px 12px 
-    &:hover
-      color $thr-clr      
-     
-//
-// comment vailne
-//
-#comment
-  font-size 1rem
-  margin 4em 0 8em 0
-  position relative
-  &:before
-    content "Comment"
-    top -36px
-    left 5px
-    position absolute
-    font-weight 300     
+    border-bottom 1px solid #eee          
+#comment div
+    margin left     
+
 .power,.vempty,.col-60
     visibility hidden
 
@@ -162,7 +129,7 @@
     background-color #F5F6FA !important
     border 0 !important
     padding 0 3px !important
-    color rgba(0,0,0,.7) !important
+    color rgba(0,0,0,.5) !important
     font-weight 300 !important
     letter-spacing .3px
     &:hover 
