@@ -16,21 +16,18 @@
       <span class="page-title"><%=  __('Page.Categories') %></span>  
 
 
-      <% site.categories.sort('length',-1).forEach( function ( category ){%>  
+      <% site.categories.sort('length',-1).each( function ( category ){%>  
 
 
-      <div>  
-      
+      <div>       
       <a class="meta-name" href="<%- url_for(category.path)%>">
       <span class="iconfont icon-category"></span>
       <%- category.name %><span class="meta-count"><%- category.length %></span>  
       </a>
-    
-      
-        <% category.posts.each(function (post){ %>   
+          
+        <% category.posts.sort('date',-1).each(function (post){ %>   
                 <%- partial('_partial/_common/item',{post: post}) %>    
         <% }) %>  
-
       </div>
     <%}) %>
   <%}%>
