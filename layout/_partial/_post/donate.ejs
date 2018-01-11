@@ -11,8 +11,8 @@
 	<span class="donate-cancel iconfont icon-cancel"></span>
 
 	<div class="donate-img-box">
-		<img id="donate-qr-wechat" class="donate-img no-gallery" src="<%= donate.wechat %>" alt="No donate img !">	
-		<img id="donate-qr-alipay" class="donate-img no-gallery" src="<%= donate.alipay %>" alt="No donate img !">				
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="<%- url_for( donate.wechat ) %>" alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="<%- url_for( donate.alipay ) %>"  alt="Lost">	
 	</div>
 
 	<span class="donate-word slideDownMin"><%- donate.word %></span>
