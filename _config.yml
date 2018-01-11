@@ -8,7 +8,6 @@ menu:
   search: search
 
 # site color [black blue brown purple red green]
-# hope you can submit your color code to me!
 color: black  
 
 #site title
@@ -19,8 +18,6 @@ profile:
   logo: Nayo
   avatar: /img/header.jpg
   author: Synch
-  city: GuangZhou
-  country: China
   descrption: 世界美好,你也是。
 
 #site favicon
