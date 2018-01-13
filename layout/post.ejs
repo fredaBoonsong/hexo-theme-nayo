@@ -5,12 +5,19 @@
 
 
 	  <div class="post-content slideDownMin">
-	    <% if (page.photos && page.photos.length){ %>
-	        <% for( i in page.photos){%>
-	          <img src="<%- url_for(page.photos[i]) %>">             
-	        <%}%>
+
+		<% if (page.banner && page.banner.length){ %>
+			
+				<div class="banner-brg"  style="background-image:url(<%- url_for(page.banner[0]) %>")>
+			    	<img class="banner-img" src="<%- url_for(page.banner[0]) %>">
+			    </div>	
+
+		<% } else if (page.photos && page.photos.length){ %>	   
+
 	    <%}%>
-	  <%- page.content %>    
+
+
+	  <%- page.content %>  
 	  </div>     
 	  
 

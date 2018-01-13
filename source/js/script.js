@@ -7,7 +7,7 @@
     // get the url
  	var href = window.location.href;
  	// find the clicked menu
- 	var clicked_menu = null;
+ 	var clicked_menu = $('#header-menu-home');
 
  	if( href.indexOf("archives") > 0){
 
@@ -25,19 +25,15 @@
 
  		clicked_menu  =  $('#header-menu-about');
 
- 	}else { //default : index
-
- 		clicked_menu = $('#header-menu-home');
  	}
+
     // set clicked menu underline and color 	 
     clicked_menu.addClass('header-menu-active');
-
 });  
 
 
 // windows scroll function
  $(function() {            
-
 
     $(window).scroll(function() {
 
