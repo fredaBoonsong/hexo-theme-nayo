@@ -1,12 +1,23 @@
 //
 // header
 //
+.post-header
+  position relative
+  &:after
+    position absolute
+    content " "
+    bottom -1rem
+    left 40%
+    width 20%
+    height 1px
+    background $line-clr
+    
 .post-title 
   display block
   font-size 38px
   font-weight 200
   color rgba(0,0,0,.7)
-  margin 1rem 0 2rem 0   
+  margin .5rem 0 2rem 0   
   
 //post
 //
@@ -27,6 +38,8 @@
   cursor pointer
   padding 4px 12px
   border-radius 50%  
+ 
+    
 //-------------donate
 #donate-box  
   display none
