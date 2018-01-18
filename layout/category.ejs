@@ -2,7 +2,7 @@
 
   <% if( is_category()){ %>
 
-  	<span class="page-title"><%=  "# "+page.category %></span>
+  	<span class="page-title"><%=  "# "+ page.category %></span>
 
   	 <% page.posts.each(function (post) { %>  
 
@@ -15,21 +15,23 @@
 
       <span class="page-title"><%=  __('Page.Categories') %></span>  
 
+      <div class="cate-container">
+        <% site.categories.sort('length',-1).each( function ( category ){%>           
+          <div>       
 
-      <% site.categories.sort('length',-1).each( function ( category ){%>  
-
-
-      <div>       
-      <a class="meta-name" href="<%- url_for(category.path)%>">
-      <span class="iconfont icon-category"></span>
-      <%- category.name %><span class="meta-count"><%- category.length %></span>  
-      </a>
+            <div class="cate-inner">
+              <a class="cate-name" href="<%- url_for(category.path)%>">                
+                
+                  <span class="iconfont icon-category"></span> <%- category.name %>                
+               
+              </a> 
+                <span class="cate-count"><%- category.length %> posts</span> 
+            </div>
+          </div>          
           
-        <% category.posts.sort('date',-1).each(function (post){ %>   
-                <%- partial('_partial/_common/item',{post: post}) %>    
-        <% }) %>  
+        <%}) %>
+
       </div>
-    <%}) %>
   <%}%>
   
 </section>

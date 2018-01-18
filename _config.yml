@@ -18,7 +18,7 @@ profile:
   logo: Nayo
   avatar: /img/header.jpg
   author: Synch
-  descrption: 世界美好,你也是。
+  location: GuangZhou CN
 
 #site favicon
 favicon: /img/favicon.png
@@ -37,7 +37,7 @@ social:
   others:
 
 
-# toc of post  [true/false]  
+# toc
 toc:
     true
 

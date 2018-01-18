@@ -5,7 +5,11 @@
 		<img class="avatar no-gallery" src="<%- url_for(profile.avatar) %>"  alt="Lose">
 					
 		<p class="author"><%= profile.author%></p>
-			
+
+		<% if(profile.location) {%>
+			<p class="location"><span class="iconfont icon-location"></span><%= profile.location%></p>
+		<% }%>
+	
 		<div class="social">
    		<% for (i in theme.social) { %>    	
 		<a href="<%- url_for(theme.social[i]) %>" class="iconfont icon-<%-i%>" target="_blank" title="<%- i %>"></a>

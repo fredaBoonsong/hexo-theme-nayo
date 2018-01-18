@@ -1,9 +1,10 @@
-@import "_variables"
-@import "_iconfont"
-@import "_extend"
+@import "_utils/_variables"
+@import "_utils/_iconfont"
+@import "_utils/_extend"
 
 
-@import "type"
+@import "_utils/type"
+@import "_utils/utils"
 
 @import "_highlight/highlight"
 
@@ -83,10 +84,9 @@ time
     display none
     position fixed   
     cursor pointer
-    opacity 0.8
     z-index 20
     bottom 8%
-    left 94%    
+    left 92%  
     &:hover    
       color $thr-clr     
  
@@ -166,7 +166,7 @@ if toc is false
 @import "_partial/search"
 
 
-@import "_animation"
+@import "_utils/_animation"
 
 @media mq-mobile 
       @import "_partial/mobile"   

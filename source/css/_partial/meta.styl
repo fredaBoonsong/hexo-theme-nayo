@@ -1,5 +1,4 @@
 //
-// category
 // tag 
 //
 
@@ -8,25 +7,9 @@
 	margin .6em  .6em 0 .8em
 	
 .meta-name	
-	display block
-	text-align right
 	margin 1em 	
 	letter-spacing 1px
 	font-size 1rem 
-	& span
-		padding-left 5px	
-.meta-count
-	font-size 0.825rem
-	
-.meta-name	
-	display block
-	text-align right
-	margin 1rem
-	letter-spacing 1px
-	& span
-		padding-left 5px	
-.meta-count
-	font-size 0.625rem
 
 //
 // archive
@@ -34,11 +17,9 @@
 .archive-year
 	dispaly inline-block
 	font-size 1.2rem
-	text-align right
+	text-align center
 	margin .8em 0  
-	opacity .7
-	line-weight 2
-	letter-spacing 1px
+	color rgba(0,0,0,.5)	
 
 
 
@@ -49,8 +30,39 @@
 	margin .6em 0 2.8em	
 .tag-wrap	
 	@extend $tags  
-	display inline-block	
+	display inline-block		
 	margin .4em .3em 	
 	padding  1px 12px
 .tag-name
 	font-size 0.825rem
+	
+//
+// cate
+// 
+.cate-container
+	clearfix()	
+	& > div		
+		column(4,12)
+
+.cate-inner
+	padding .8rem
+	margin .5rem 1rem 1rem 1rem
+	border 1px solid $line-clr
+	border-radius 4px
+	overflow hidden
+	
+	&:hover		
+		box-shadow 3px 3px 3px rgba(0,0,0,.03)
+		
+.cate-name	
+	display inline-block 
+	@extend $oneline
+	width 100%
+	margin 1rem 0 1.25rem 0	
+	&:hover
+		color thr-clr
+.cate-count
+	display block
+	text-align right
+	font-size 0.825rem		
+	
