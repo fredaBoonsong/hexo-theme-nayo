@@ -109,11 +109,42 @@
 .slideDownMin
   -webkit-animation-fill-mode: forwards
   -webkit-animation-name: slideDownMin
-  -webkit-animation-duration  .5s  
+  -webkit-animation-duration  .4s  
   -webkit-animation-iteration-count 1 
   -webkit-animation-delay 0s
 
 
+
+@keyframes sildeUpMin{
+    0%{
+    -webkit-transform:translateY(30px)  
+    transform:translateY(30px)   
+    opacity 0
+  }
+    100%{
+    -webkit-transform:translateY(0)
+    transform:translateY(0) 
+    opacity 1
+  }
+}
+@-webkit-keyframes sildeUpMin{
+    0%{
+    -webkit-transform:translateY(30px)   
+    opacity 0
+  }
+    100%{
+    -webkit-transform:translateY(0)
+    opacity 1
+  }
+}   
+
+
+.sildeUpMin
+  -webkit-animation-fill-mode: forwards
+  -webkit-animation-name: sildeUpMin
+  -webkit-animation-duration  .4s  
+  -webkit-animation-iteration-count 1 
+  -webkit-animation-delay 0s
 
 
 @keyframes itemLIn{
@@ -220,8 +251,27 @@
 }   
 
 .menuSlideOut
-  -webkit-animation-fill-mode: forwards
-  -webkit-animation-name: menuSlideOut
+  -webkit-animation-fill-mode forwards
+  -webkit-animation-name menuSlideOut
   -webkit-animation-duration  .4s  
+  -webkit-animation-iteration-count 1 
+  -webkit-animation-delay 0s
+  
+
+@keyframes scrollIn{
+  from {
+  transform: translateY(50px);
+  opacity: 0;
+  }
+  to {
+  transform: translateY(0px);
+  opacity: 1;
+  }
+}
+
+.scrollIn
+  -webkit-animation-fill-mode forwards
+  -webkit-animation-name scrollIn
+  -webkit-animation-duration .6s  
   -webkit-animation-iteration-count 1 
   -webkit-animation-delay 0s

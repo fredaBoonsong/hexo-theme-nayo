@@ -6,13 +6,14 @@
 
 	  <div class="post-content slideDownMin">
 
-		<% if (page.banner && page.banner.length){ %>
+		<% if (page.banner){ %>
 			
-				<div class="banner-brg"  style="background-image:url(<%- url_for(page.banner[0]) %>")>
-			    	<img class="banner-img" src="<%- url_for(page.banner[0]) %>">
+				<div class="banner-brg"  style="background-image:url(<%- url_for(page.banner) %>")>
+			    	<img class="banner-img" src="<%- url_for(page.banner) %>">
 			    </div>	
 
-		<% } else if (page.photos && page.photos.length){ %>	   
+		<% } else if (page.photos && page.photos.length){ %>	
+		   
 
 	    <%}%>
 
@@ -26,4 +27,5 @@
 
 </article>
 
+<%- partial('_partial/_post/toc',{post:page}) %>
 <%- js('js/post') %>

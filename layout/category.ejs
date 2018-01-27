@@ -1,4 +1,4 @@
-<section class="block fadeIn">
+<section class="block">
 
   <% if( is_category()){ %>
 
@@ -19,17 +19,19 @@
         <% site.categories.sort('length',-1).each( function ( category ){%>           
           <div>       
 
-            <div class="cate-inner">
-              <a class="cate-name" href="<%- url_for(category.path)%>">                
-                
-                  <span class="iconfont icon-category"></span> <%- category.name %>                
+              <div class="cate-inner">
+                <a class="cate-name" href="<%- url_for(category.path)%>">               
+                  
+                    <span class="iconfont icon-category"></span> <%- category.name %>                
+                 
+                </a> 
                
-              </a> 
-                <span class="cate-count"><%- category.length %> posts</span> 
-            </div>
+                  <span class="cate-count"><%- category.length %> posts</span> 
+
+              </div>
           </div>          
           
-        <%}) %>
+         <%}) %>
 
       </div>
   <%}%>
