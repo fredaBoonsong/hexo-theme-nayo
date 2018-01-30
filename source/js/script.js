@@ -68,15 +68,24 @@ function slideHeader(){
 function initBackToTop(){
     //back to top  
     if ($(window).scrollTop() > 800 ){
-            $('.back-to-top').addClass('slideRIn').show();
+            $('.back-to-top')
+            .addClass('slideRIn')
+            .show();
         }
     else{
-            $('.back-to-top').removeClass('slideRIn').hide();
+            $('.back-to-top')
+            .removeClass('slideRIn')
+            .hide();
         }
   
     $('.back-to-top').click(function() {
-            $('html,body').animate({scrollTop: 0}, 600);     
-            $(window).scrollTop() = 0;
+            $('html,body')
+            .animate({
+                scrollTop: 0
+            }, 600);   
+
+            $(window)
+            .scrollTop() = 0;
     });
 
 }
@@ -104,3 +113,15 @@ function setHeader(){
     .removeClass('slideUp')
     .removeClass('slideDown');
 }
+
+
+
+
+
+
+
+
+
+console.log("%c Nayo %c","background:#000; color:#fff","","山水一程 三生有幸");
+console.log("%c Mail %c","background:#000; color:#fff","","lemonreds@163.com ");
+console.log("https://github.com/Lemonreds/hexo-theme-nayo");

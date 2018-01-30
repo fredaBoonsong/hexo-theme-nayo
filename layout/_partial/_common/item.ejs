@@ -8,11 +8,11 @@
 
 	  <% }%>
 
-      <div class="animation-item item slideDownMin">   	
+      <div class="animation-item slideDownMin">   	
 
-        <span class="item-date"> <%= date(post.date, date_format) %></span>    
+        <span class="archive-date"> <%= date(post.date, date_format) %></span>    
 
-        <a class="item-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+        <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
 
       </div>
 

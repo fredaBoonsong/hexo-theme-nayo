@@ -1,22 +1,35 @@
-<section class="block slideDownMin">
+<section class="archive block slideDownMin">
 
     <span class="page-title"><%=  __('Page.Archives') %></span>  
    
     <% var last %> 
+    <ul>
     <% page.posts.each(function (post) { %>
       <% var year = post.date.year() %>
 
         <%if(last != year ){%>   
-
+          
       		<h3 class="archive-year"><%= year %></h3>          
 
       	  <% last = year %>	  
 
 		    <%}%>
 
-        <%- partial('_partial/_common/item',{post:post,date_format: 'MM-DD'}) %>       
+
+        <li class="animation-item">
+          <span class="archive-time"> <%= date(post.date, "YYYY-MM-DD") %> </span>
+
+          <span class="archive-title">
+          <a href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+          </span>
+
+        </li>
+     
+
 
     <% }) %>
+
+    </ul>
 
 </section>
 

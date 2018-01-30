@@ -1,3 +1,4 @@
+
 //
 // tag 
 //
@@ -11,16 +12,6 @@
 	letter-spacing 1px
 	font-size 1rem 
 
-//
-// archive
-//
-.archive-year
-	dispaly inline-block
-	font-size 1.2rem
-	text-align center
-	margin 2rem 0  
-	color rgba(0,0,0,.5)	
-	
 
 //
 // tag 	
@@ -64,3 +55,51 @@
 	text-align right
 	font-size 0.825rem		
 	
+
+
+//
+// archive
+//
+.archive
+	padding 0 0rem
+	& ul
+		list-style-type none
+		margin 0
+		padding 0
+		& li
+			margin 0			
+			position relative
+			padding 1.8rem 0 1.8rem 4rem
+			
+			
+.archive ul li:after	
+	position absolute
+	content " "
+	bottom 0
+	left 2%
+	width 96%
+	height .4px
+	background $line-clr	
+				
+	    		    
+
+.archive-year
+	dispaly inline-block
+	font-size 1.2rem
+	text-align center
+	margin 2rem 0  
+	color rgba(0,0,0,.4)	
+	
+.archive-time		
+	position  absolute
+	left 6rem
+	top 35px
+	font-size .9rem
+	color rgba(0,0,0,.5)	    
+.archive-title
+	display inline-block
+	margin-left 10rem
+	
+	& a
+		font-size 1.25rem
+		letter-spacing 1px
