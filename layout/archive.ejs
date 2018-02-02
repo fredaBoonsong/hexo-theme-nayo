@@ -2,6 +2,8 @@
 
     <span class="page-title"><%=  __('Page.Archives') %></span>  
    
+    <% var  date_format = config.date_format  %>
+
     <% var last %> 
     <ul>
     <% page.posts.each(function (post) { %>
@@ -17,7 +19,7 @@
 
 
         <li class="animation-item">
-          <span class="archive-time"> <%= date(post.date, "YYYY-MM-DD") %> </span>
+          <span class="archive-time"> <%= date(post.date, date_format || "YYYY-MM-DD") %> </span>
 
           <span class="archive-title">
           <a href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>

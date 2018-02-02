@@ -122,11 +122,8 @@ $(function (){
 		 if($iconShare.is(':visible')){
           $iconShare.hide();      
          }else {     
-          $iconShare.show();     
+          $iconShare.show();   
         }
 
 	});
-
-
 })
-

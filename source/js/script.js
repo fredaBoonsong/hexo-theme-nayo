@@ -117,11 +117,5 @@ function setHeader(){
 
 
 
-
-
-
-
-
 console.log("%c Nayo %c","background:#000; color:#fff","","山水一程 三生有幸");
 console.log("%c Mail %c","background:#000; color:#fff","","lemonreds@163.com ");
-console.log("https://github.com/Lemonreds/hexo-theme-nayo");

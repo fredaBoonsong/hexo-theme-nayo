@@ -5,32 +5,31 @@
   width 100%   
 .header-nav   
   margin 0 auto  
-  max-width 54%
+  max-width 56%
   height 4rem
   line-height 4rem  
   display flex  
   align-items center
   justify-content space-between 
-
+  
 .header-logo   
     @extend $oneline
     display inline-block
-    max-width 45%
+    max-width 40%
     font 1.625rem $header-font
            
 .header-menu
     display flex
     justify-content flex-end
-    white-space nowrap
+    white-space nowrap  
     
 .header-menu-link  
     @extend $oneline    
-    margin 0 1rem 
+    margin 0 .8rem 
     font-size .9rem
     display inline-block
     letter-spacing 1px 
-     
-
+    
 //---------js  
 .header-static
   position static
@@ -44,14 +43,9 @@
   background-color $white
   transition all .6s   
 .header-menu-active  
-  border-bottom 2px solid rgba($main-clr,.5)
-  &:visited,&:active,&:link      
-      color rgba($main-clr, 1)
-  &:hover
-      color $thr-clr 
-      
+  border-bottom 1px solid $black      
 .header-title
-   font-size 1.625rem
+   font-size 1.4rem
 
 //      
 // slide-menu 

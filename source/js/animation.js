@@ -1,5 +1,6 @@
 //------------------
 // animation
+// item-hover-slide
 //------------------
 
 $(function(){
@@ -18,7 +19,8 @@ $(function(){
 
 
 //------------------
-// article scroll in
+// index page
+// article scroll In
 // 2018-01-27
 //------------------
 
@@ -43,9 +45,19 @@ $(function(){
 
     }
 
+
+
+    // the frist articles
+    if( obj.eq(0) ){
+
+            obj.eq(0).addClass('scrollIn');
+
+    }
+
     // check (is visible in window ) ? 
     function judgeScroll(){
-        for(var j=0 ; j < num.length ; j++ ){
+
+        for(var j= 1 ; j < num.length ; j++ ){
             if ( num[j] < (wScrollTop + wH) ) {
                 for ( var k = 0 ; k <= j ; k++){
                     obj.eq(k).addClass('scrollIn');

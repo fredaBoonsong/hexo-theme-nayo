@@ -1,18 +1,12 @@
 <% if(post) {%>	
 
-	  <% var  date_format %>
+	   <% var  date_format = config.date_format  %>
 
-	  <% if (! date_format) {%>
+	   <div class="item animation-item slideDownMin">   	
 
-	  	<%  date_format = 'YYYY-MM-DD' %>
+        <span class="item-date"> <%= date(post.date, date_format || 'YYYY-MM-DD' ) %></span>    
 
-	  <% }%>
-
-      <div class="animation-item slideDownMin">   	
-
-        <span class="archive-date"> <%= date(post.date, date_format) %></span>    
-
-        <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+        <a class="item-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
 
       </div>
 

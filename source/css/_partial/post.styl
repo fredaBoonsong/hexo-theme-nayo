@@ -7,8 +7,8 @@
     position absolute
     content " "
     bottom -2rem
-    left 40%
-    width 20%
+    left 30%
+    width 40%
     height 1px
     background $line-clr
     
@@ -23,6 +23,14 @@
 //
 .post-content
   margin 5.5rem 0
+  & p a 
+    @extend $toRight
+  & p a,& li a
+    &:link,&:visited,&:active 
+      color $thr-clr    
+    &:hover    
+      color $main-clr    
+
 //
 // footer
 //

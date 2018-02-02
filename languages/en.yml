@@ -1,10 +1,10 @@
 Menu:
-  home: HOME
-  categories: CATEGORIES
-  tags: TAGS
-  archives: ARICHIVES
-  about: ABOUT
-  search: SEARCH
+  home: Home
+  categories: Categories
+  tags: Tags
+  archives: Archives
+  about: About
+  search: Search
 Page:
   Archives: Archives
   Categories: Categories
@@ -21,15 +21,15 @@ Paginator:
 
 
 Contents: Contents
-Read_more: More
+Read_more: Continue
 Untitled: Untitled
 
 Comment:
-  Nick_holder: nick
-  Mail_holder: mail
+  Nick_holder: Nick
+  Mail_holder: Mail
   Comment_holder: Typing something here.
   Submit_holder: Submit
 
 Search:
   Sidebar_words: Search
-  input_words: Typing Something
+  input_words: Typing Something here.
