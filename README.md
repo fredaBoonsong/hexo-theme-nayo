@@ -1,14 +1,12 @@
 ## hexo-theme-nayo
 
-A clean and white theme for Hexo. 
+a concise theme for hexo.
 
-## Demo And Configuration
+主题预览 [preview](http://lemonreds.github.io)
 
-### 主题预览 [preview](http://lemonreds.github.io)
+主题配置 [configuration](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
 
-### 主题配置 [configuration](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
-
-## Installation 快速安装
+## Installation
 
 ### 1. Get Nayo from github 
 ```
@@ -22,13 +20,12 @@ or dowanload zip and rename Nayo into **yourblog/themes/**
 theme: Nayo
 ```
 
-
-## Theme name 关于主题名字
+## Theme Name 
 
 来自歌曲 <东京不太热> -封茗囧菌
 
-## Other 其他
+## Other
 
-有任何问题欢迎在Issue提出，我会第一时间回复你。
+有任何问题欢迎在issue提出，我会第一时间回复你。
 
 当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
