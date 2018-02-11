@@ -4,12 +4,12 @@
   <%
   var title = titlecase(page.title);
 
-  if (is_archive()){
-    title = __('Page.Archives');   
-  } else if (is_category()){
-    title = __('Page.Categories') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('Page.Tags') + ': ' + page.tag;
+    if (is_archive()){
+      title = __('Page.Archives');   
+    } else if (is_category()){
+      title = __('Page.Categories') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('Page.Tags') + ': ' + page.tag;
   }
   %>
   
@@ -23,14 +23,5 @@
 
   <!-- css -->
   <%- css('css/style.css') %>  
-  <!-- Jquery -->
-  <%- js('//cdn.staticfile.org/jquery/3.2.1/jquery.min.js') %> 
-  <!-- Add fancyBox -->
-  <%- css('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css') %>
-  <%- js('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js') %> 
-  <%- js('js/gallery.js') %>
-  <!-- javascript --> 
-  <%- js('js/mobile.js') %>  
-  <%- js('js/utils.js') %>    
-  <%- js('js/script.js') %>  
+  <%- js('js/jquery-3.3.1.min.js') %> 
 </head>

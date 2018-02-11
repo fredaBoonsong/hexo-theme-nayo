@@ -2,19 +2,17 @@
 
 a concise theme for hexo.
 
-主题预览 [preview](http://lemonreds.github.io)
-
-主题配置 [configuration](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
+预览 [preview](http://lemonreds.github.io) | 配置 [config](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
 
 ## Installation
 
-### 1. Get Nayo from github 
+1. Get Nayo from github 
 ```
 $ git clone https://github.com/Lemonreds/nayo.git themes/nayo
 ```
 
 or dowanload zip and rename Nayo into **yourblog/themes/**  
-### 2. Modify theme setting in yourblog/_config.yml to Nayo. 
+2. Modify theme setting in yourblog/_config.yml to Nayo. 
 
 ```
 theme: Nayo

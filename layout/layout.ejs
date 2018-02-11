@@ -16,18 +16,26 @@
 
         <% }%>
 
-        <%-body%></section> 
+        <%-body%>
+        </section> 
 
     </div>        
 
     
-    <div class="mask"> </div>
-    <div class="back-to-top iconfont icon-backtotop fadeIn"></div> 
+    <div class="mask"></div>
+    <div class="back-to-top iconfont icon-backtotop sildeUpMin"></div> 
 
     <%- partial('_partial/search-container') %>
     <%- partial('_partial/slide-menu') %>     
     <%- partial('_partial/footer') %> 
+
+
+   
     <%- partial('_partial/after-footer') %> 
-  </body>   
-  <%- js('js/animation.js') %>   
+    <!-- javascript --> 
+    <%- js('js/mobile.js') %>  
+    <%- js('js/utils.js') %>    
+    <%- js('js/script.js') %>  
+    <%- js('js/animation.js') %> 
+  </body>        
 </html>
