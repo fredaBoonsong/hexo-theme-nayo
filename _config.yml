@@ -23,13 +23,13 @@ title: Nayo
 # 作者信息
 profile: 
   logo: Nayo
-  avatar: /img/header.jpg
+  avatar: /images/header.jpg
   author: Lemonreds
   location: GuangZhou CN
 
 # site favicon
 # 站点图标
-favicon: /img/favicon.png
+favicon: /images/favicon.png
 
 # social link
 social:  
@@ -92,7 +92,7 @@ share_item:
 - douban
 - facebook
 - twitter
-#- tumblr
+- tumblr
 - google
 
 
@@ -101,13 +101,13 @@ share_item:
 donate:
   enable: true
   word: 世界美好 你也是
-  wechat: /img/donate1.png
-  alipay: /img/donate2.png
+  wechat: /images/donate1.png
+  alipay: /images/donate2.png
 
 # fancybox
 # https://github.com/fancyapps/fancybox
-fancybox:
-  false
+# fancybox:
+#  true
 
 
 #theme version

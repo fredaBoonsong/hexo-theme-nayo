@@ -2,6 +2,8 @@
 // index script
 //------------------
 
+
+
 // set clicked menu underline
  $(function(){  
     // get the url
@@ -35,13 +37,13 @@
 // windows scroll function
  $(function() {            
 
+    addBTTListener();
     $(window).scroll(function() {
 
         if( isPC() ){
-            slideHeader();  
+            slideHeader();             
         }
-            initBackToTop();
-
+        resetBTT();        
     });    
  });
 
@@ -49,11 +51,15 @@ var last_scroll = 0;
 
 function slideHeader(){
 
-    if( last_scroll !=0){             
-        if(  $(window).scrollTop() == 0 ){
-          setHeader();
+    var _scroll;
 
-        }else if($(window).scrollTop() - last_scroll > 0 ) {
+    if( last_scroll != 0 ){         
+        
+        _scroll = $(window).scrollTop();
+        
+        if( _scroll <= 0 ){
+        setHeader();
+        }else if( _scroll - last_scroll > 0 ) {
         //下滑
         hideHeader();        
         }else{
@@ -61,34 +67,32 @@ function slideHeader(){
         showHeader(); 
        }
     }   
-    last_scroll = $(window).scrollTop();
+    last_scroll = _scroll  
 }
 
 
-function initBackToTop(){
+function resetBTT(){
     //back to top  
     if ($(window).scrollTop() > 800 ){
-            $('.back-to-top')
+            $('#backTop')
             .addClass('slideRIn')
             .show();
         }
     else{
-            $('.back-to-top')
+            $('#backTop')
             .removeClass('slideRIn')
             .hide();
         }
-  
-    $('.back-to-top').click(function() {
+}
+function addBTTListener(){
+    $('#backTop').click(function() {
             $('html,body')
             .animate({
                 scrollTop: 0
-            }, 600);   
-
-            $(window)
-            .scrollTop() = 0;
+            }, 600);             
     });
-
 }
+
 
 function showHeader(){
    

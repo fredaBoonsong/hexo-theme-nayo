@@ -4,26 +4,30 @@
 
 
 $(function(){
-	$('.toc-contents').click();
+	
+	initToc()
+
 })
 
+
 function change(){
-	var $a = $('.toc-contents');
+	var $a = $('.toc-contents');	
 
 	if( $a.hasClass( "icon-open" )){
 	//open
 	$('.toc-list').hide();
-	$a.removeClass("icon-open").addClass("icon-close");
+		$a.removeClass("icon-open").addClass("icon-close");
 	}else{ 
 	//hide
 	$('.toc-list').show();
-	$a.removeClass("icon-close").addClass("icon-open");
+		$a.removeClass("icon-close").addClass("icon-open");
 	}
 
 }
 
 
-$(function(){
+
+function initToc(){
 	//获取第一级目录	
 	var $level  =  $('h1');	
 
@@ -80,9 +84,13 @@ $(function(){
 		$('#toc-item-'+i).click(function(){
 			scrollToId(id);
 		})		
-	})
+	})	
 
-})
+	//toc 默认关闭
+	$('.toc-contents').click()	
+
+}
+
 
 
 //滑动 固定Toc
@@ -217,8 +225,6 @@ function checkIsHideToc(){
 	var nav_height =  $('.post-nav').offset().top - $(document).scrollTop();
 
 
-	if( nav_height <= height/1.1 ) 
-		return true;
-	return false;
-
+	return ( nav_height <= height/1.1 ) 
 }
+	

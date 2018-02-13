@@ -1,12 +1,13 @@
 {
   "name": "hexo-theme-nayo",
-  "version": "1.0", 
-  "description": "A clean and white theme for Hexo.",
+  "version": "1.0",
+  "description": "a concise theme for hexo.",
+  "main": "main.js", 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lemonreds/hexo-theme-nayo.git"
   },
-  "author": "synch",
+  "author": "lemonreds",  
   "bugs": {
     "url": "https://github.com/Lemonreds/hexo-theme-nayo/issues"
   },

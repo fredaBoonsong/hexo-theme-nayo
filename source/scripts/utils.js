@@ -1,5 +1,5 @@
 //------
-// util
+// utils
 //------
 function isPC(){  
     var userAgentInfo = navigator.userAgent;  
@@ -12,7 +12,7 @@ function isPC(){
 }            
 
 
-function cutString( str ,maxlength ){
+function cutString( str , maxlength ){
 
 	if( str.length > maxlength ) return str.substring(0,maxlength-1)+"...";
 	else

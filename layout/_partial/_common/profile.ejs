@@ -11,8 +11,11 @@
 		<% }%>
 	
 		<div class="social">
-   		<% for (i in theme.social) { %>    	
-		<a href="<%- url_for(theme.social[i]) %>" class="iconfont icon-<%-i%>" target="_blank" title="<%- i %>"></a>
+   		<% for (var i in theme.social) { %>   
+   		 	
+		<a class="iconfont icon-<%= i %>" target="_blank" href="<%- url_for(theme.social[i]) %>" title="<%= i %>">
+		
+		</a>
 	    <% } %>
     	</div>		
 </div>

@@ -2,7 +2,7 @@
 
 a concise theme for hexo.
 
-预览 [preview](http://lemonreds.github.io) | 配置 [config](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
+预览 [preview](http://lemonreds.github.io) | 常见问题 [issues](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
 
 ## Installation
 
@@ -24,6 +24,6 @@ theme: Nayo
 
 ## Other
 
-有任何问题欢迎在issue提出，我会第一时间回复你。
+有任何问题欢迎在 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 提出，我会第一时间回复你。
 
 当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)

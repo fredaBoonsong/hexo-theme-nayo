@@ -4,10 +4,11 @@
 
 $(function(){
 
-		if(isPC ())  return;
+		if( !isPC() ){ 
 
-		initSlideMenu();	
-
+			initSlideMenu()
+		
+		}
 })
 	
 
@@ -74,4 +75,3 @@ function hideMenu( $icon , $mask){
 
 	$mask.hide();	
 }
-
