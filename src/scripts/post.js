@@ -8,20 +8,17 @@
 import Utils from './utils.js'
 import Toc from './toc.js'
 
-
-var logo;
-var logoTitle;
-
-
 module.exports={
 
 	init : function(){
-		init();
+
+		initPost();
+
 		Toc.init();
 	}
 
 }
-function init(){
+function initPost(){
 
 	initPostTitle();
 	initDonate();
@@ -30,42 +27,50 @@ function init(){
 }
 
 
+
+
+var $logo;
+
+var logoText;
+
 //post页面标题跟踪
 function initPostTitle(){
 
-	 if(! Utils.isPc() ){
-	 	setTitle();
-	 	return ;
-	 }  
+
+
+
 	 //初始化
-	 logo = $('.header-logo');
-	 logoTitle =  $('.header-logo').text();
+	$logo = $('.header-logo');
+	logoText = $('.header-logo').text();
+
+
+	if( !Utils.isPc() ){
+		setTitle();
+	}
 
 	$(window).scroll(function() {
 
 		var $header =$('.header');
-		//下滑了header则修改logo
+		
 		if($header.hasClass('slideDown')){				
-			setTitle();
-		}else if($(window).scrollTop() == 0){
-			//还原logo
+			setTitle();		
+		}else if($(window).scrollTop() == 0){			
 			setLogo();
 		}
 	})
 
-	//把logo设置成标题
-	function setTitle(){
-	
+	//文章的标题设置到header
+	function setTitle(){	
 		//获取post标题
-		var postTitle = $('.post-title').text();
-		$('.header-logo').addClass('header-title').text(postTitle);		
+		const postTitle = $('.post-title');
+		if( postTitle.length > 0){
+			$logo.addClass('header-title').text(postTitle.text());	
+		}	
 		
 	}
-	//还原logo
-	function setLogo(){
-		
-		$('.header-logo').removeClass('header-title').text(logoTitle);	
-	
+	//还原LOGO
+	function setLogo(){		
+			$logo.removeClass('header-title').text(logoText);		
 	}	
 }
 

@@ -230,17 +230,17 @@ function subItemHighLigth( text ){
 
 // 获取元素到浏览器顶部的距离
 function  getOffsetTop( $obj ){
-    var mTop = $obj.offset().top; 
-    var sTop = $(window).scrollTop();
-    var result = mTop - sTop;   
+    const mTop = $obj.offset().top; 
+    const sTop = $(window).scrollTop();
+    const result = mTop - sTop;   
     return result;  
 }
 
 function checkIsHideToc(){
 
-	var height = $(window).height();
+	const height = $(window).height();
 
-	var nav_height =  $('.post-nav').offset().top - $(document).scrollTop();
+	const nav_height =  $('.post-nav').offset().top - $(document).scrollTop();
 
 
 	return ( nav_height <= height/1.1 ) 

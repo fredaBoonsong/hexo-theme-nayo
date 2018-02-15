@@ -21,8 +21,8 @@ module.exports = {
 
 function opContainer(){
 
-        var $sc = $('.search-container');
-        var $msk = $('.mask');      
+        const $sc = $('.search-container');
+        const $msk = $('.mask');      
 
         if($sc.is(':visible')){
 

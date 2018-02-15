@@ -8,18 +8,18 @@ h1,h2,h3
 h4,h5,h6
 	margin 14px 0
 h1
-	font-size 22px
+	font-size 24px
 h2
-	font-size 18px
+	font-size 20px
 h3
 	font-size 16px
 h4
-	font-size 14px
+	font-size 16px
 h5,h6
 	font-size 12px
 p
 	margin 12px 0
-	font-size 14px	
+	font-size 16px	
 
 
 //container 
@@ -48,7 +48,11 @@ p
 .header-logo
 	display inline-block
 	font-size 22px	
-	margin 0 auto
+	margin 0 auto 
+	position relative
+	left -12px
+
+
 .header-title
 	width auto
 	max-width 50%
@@ -60,11 +64,16 @@ p
 	display inline
 //post
 .post
-	padding 0 .8em
+	padding 0 .4em
 .post-title
 	display none
 .post-info
-	margin 0	
+	width  100%
+	margin 0		
+.post-time,.post-meta,.post-words
+	margin  0
+	padding-right .8rem
+	text-align left
 
 .nav
 	margin 1em 0 2em 0
@@ -86,23 +95,30 @@ p
 //article	
 .article
 	margin 10px 0 40px 0
-
+	padding 10px 0
 .article-header
 	padding 0 
 	text-align left
 	& time
-		font-size 13px
+		font-size 14px
 		padding-left 6px
 .article-title
 	margin 2px 0
-	font-size 20px
+	font-size 24px
 .article-excerpt p
 	margin 12px 0
-	color rgba(0,0,0,.8)
-	font-size 13px !important	
+	color rgba(0,0,0,.8)	
 .article-readmore
 	display none
-	   
+//cate
+.cate-container
+	clearfix()	
+	& > div		
+		column(6,12)
+			
+.cate-inner
+	padding 10px
+
 //item
 .item 
 	margin 4px 8px
@@ -150,6 +166,7 @@ p
 //footer
 #footer
 	display block
+	padding 10px
 #footer div
 	margin 0
 
@@ -162,7 +179,7 @@ p
 	left 0
 	top 0
 	width 100%
-	max-height 85%
+	max-height 95%
 	border-radius 0	
 .search-input
 	width 80%

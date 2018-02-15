@@ -9,13 +9,10 @@
 		<% if (page.banner){ %>
 			
 				<div class="banner-brg"  style="background-image:url(<%- url_for(page.banner) %>")>
-			    	<img class="banner-img" src="<%- url_for(page.banner) %>">
-			    </div>	
+			    	<img class="banner-img" src="<%- url_for(page.banner) %>"/>
+			  </div>	
 
-		<% } else if (page.photos && page.photos.length){ %>	
-		   
-
-	    <%}%>
+		<% } else if (page.photos && page.photos.length){ %> <%}%>
 
 	  	<%- page.content %>  	
 

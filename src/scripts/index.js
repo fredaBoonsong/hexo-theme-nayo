@@ -11,6 +11,7 @@ module.exports  = {
 
         initMenu();
         initHeader();
+        initBackToTop();
 
     }
 }
@@ -49,13 +50,13 @@ var last_scroll =  0
 
 function initHeader() {            
 
-    addBTTListener();
-    $(window).scroll(function() {
+     $(window).scroll(function() {
 
         if( Utils.isPc() ){
             slideHeader();             
         }
-        resetBTT();        
+
+        resetBackToTop();        
     });    
 }
 
@@ -82,8 +83,8 @@ function slideHeader(){
 }
 
 
-function resetBTT(){
-            //back to top  
+function resetBackToTop(){
+    //back to top  
     if ($(window).scrollTop() > 800 ){
          $('#backTop')
          .addClass('slideRIn')
@@ -97,7 +98,7 @@ function resetBTT(){
 }
 
         
-function addBTTListener(){
+function initBackToTop(){
     $('#backTop').click(function() {
         $('html,body')
         .animate({

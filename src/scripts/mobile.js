@@ -3,21 +3,24 @@
 //-----------
 
 import Utils from './utils.js'
+
 module.exports = {
 
 	init: function(){
-		if( Utils.isPc()){
-			initSlideMenu()		
-		}
+		if( !Utils.isPc() ){
+			
+			initSlideMenu();		
+		}		
 	}
 }
 	
 
 function initSlideMenu(){
-		$('.mobile-toggle').click(function(){
-	
-				$toggle = $(this);				
-				$mask   = $('.mask');
+
+		const  $toggle = $(this);				
+		const  $mask   = $('.mask');
+
+		$('.mobile-toggle').click(function(){				
 
 				showMenu($toggle,$mask);	
 
@@ -49,6 +52,10 @@ function showMenu( $icon , $mask){
 	.removeClass('slide-left')
 	.addClass('slide-right');
 
+	$('#footer')
+	.removeClass('slide-left')
+	.addClass('slide-right');
+
 
 	$mask.show();
 
@@ -71,6 +78,10 @@ function hideMenu( $icon , $mask){
 	.removeClass('slide-right')
 	.addClass('slide-left');
 	$('.container')
+	.removeClass('slide-right')
+	.addClass('slide-left');
+
+	$('#footer')
 	.removeClass('slide-right')
 	.addClass('slide-left');
 

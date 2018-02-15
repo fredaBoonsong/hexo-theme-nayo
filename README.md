@@ -2,7 +2,7 @@
 
 a concise theme for hexo.
 
-预览 [preview](http://lemonreds.github.io) | 常见问题 [common issues](http://synch.site/2018/01/01/Hexo-theme-Nayo/)
+预览 [preview](http://lemonreds.github.io) | 常见问题 [common issues](http://synch.site/2018/02/08/hexo-theme-nayo/)
 
 ## Installation
 
@@ -12,6 +12,7 @@ $ git clone https://github.com/Lemonreds/nayo.git themes/nayo
 ```
 
 or dowanload zip and rename Nayo into **yourblog/themes/**  
+
 2. Modify theme setting in yourblog/_config.yml to Nayo. 
 
 ```
@@ -22,13 +23,14 @@ theme: Nayo
 
 来自歌曲 <东京不太热> -封茗囧菌
 
-## Other
-
-有任何问题欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) , 我会第一时间回复你。
-
-当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
 
 ## Changelog
 
 v1.0
     webpack打包
+
+## Other
+
+有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
+
+当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
