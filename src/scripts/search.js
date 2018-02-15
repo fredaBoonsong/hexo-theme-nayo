@@ -1,18 +1,23 @@
 //------------------
 //search-container
 //------------------
-$(function (){
 
-    $('.search-widget,.mobile-menu-search,#header-menu-search').click(function(){  
+
+module.exports = {
+
+    init : function (){
+
+      $('.search-widget,.mobile-menu-search,#header-menu-search').click(function(){  
         opContainer();
-    });    
+      });    
 
   
-    $('.search-cancel').click(function (){
-        opContainer();      
-    })
+      $('.search-cancel').click(function (){
+          opContainer();      
+      })
+    } 
 
-})
+}
 
 function opContainer(){
 

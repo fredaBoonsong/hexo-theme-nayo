@@ -1,9 +1,19 @@
+
+module.exports = {
+
+    init: function(){
+        initHoverSlide();
+        initArticleScroll();
+    }    
+}
+
 //------------------
 // animation
 // item-hover-slide
 //------------------
 
-$(function(){
+function initHoverSlide(){
+
    $('.animation-item').hover(
 
    	function(){
@@ -14,9 +24,8 @@ $(function(){
 
    	    $(this).removeClass('itemLIn').addClass('itemRIn'); 
 
-   });  
-});
-
+   });     
+}
 
 //------------------
 // index page
@@ -24,7 +33,7 @@ $(function(){
 // 2018-01-27
 //------------------
 
-$(function(){
+function initArticleScroll(){
 
     // get window params
     var wH         = $(window).height();
@@ -54,7 +63,7 @@ $(function(){
 
     }
 
-    // check (is visible in window ) ? 
+    // check (is visible in window ? ) 
     function judgeScroll(){
 
         for(var j= 1 ; j < num.length ; j++ ){
@@ -76,4 +85,4 @@ $(function(){
         judgeScroll();
     });
 
-});
+}

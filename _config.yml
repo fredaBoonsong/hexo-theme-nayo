@@ -20,6 +20,7 @@ color: black
 title: Nayo
 
 # author profile
+# source/imgaes/
 # 作者信息
 profile: 
   logo: Nayo
@@ -28,6 +29,7 @@ profile:
   location: GuangZhou CN
 
 # site favicon
+# source/imgaes/
 # 站点图标
 favicon: /images/favicon.png
 
@@ -71,7 +73,7 @@ busuanzi:
 
 # disqus(https://disqus.com/)
 disqus:
-  comment: true
+  comment: false
   shortname: lemonreds
 
 # valine(https://github.com/xCss/Valine)
@@ -98,6 +100,7 @@ share_item:
 
 # donate
 # 捐赠功能
+# source/imgaes/
 donate:
   enable: true
   word: 世界美好 你也是

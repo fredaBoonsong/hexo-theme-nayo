@@ -2,28 +2,41 @@
 // toc
 //---------
 
+import Utils from './utils'
 
-$(function(){
+module.exports = {
 	
-	initToc()
-
-})
-
-
-function change(){
-	var $a = $('.toc-contents');	
-
-	if( $a.hasClass( "icon-open" )){
-	//open
-	$('.toc-list').hide();
-		$a.removeClass("icon-open").addClass("icon-close");
-	}else{ 
-	//hide
-	$('.toc-list').show();
-		$a.removeClass("icon-close").addClass("icon-open");
-	}
-
+	init : function (){
+		
+		initToc();
+		addListener();
+		fixToc();
+	}	
 }
+
+function addListener(){
+
+	const $tc = $('#toc-contents');
+
+	if($tc.length > 0){
+
+		$tc.click( function(){
+			
+			if( $tc.hasClass( "icon-open" )){
+		
+				$('.toc-list').hide();
+				$tc.removeClass("icon-open").addClass("icon-close");
+			}else{ 
+			
+				$('.toc-list').show();
+				$tc.removeClass("icon-close").addClass("icon-open");
+			}
+		});
+		//默认关闭
+		$tc .click();
+	}
+}
+
 
 
 
@@ -76,13 +89,13 @@ function initToc(){
 				$toc.append(sub_li);
 				//绑定第二级点击跳转事件				
 				$('#toc-subitem-'+i+j).click(function(){			
-					scrollToId(sub_id);
+					Utils.scrollToId(sub_id);
 				});
 			}		
 		})	
 		//绑定第一级点击跳转事件
 		$('#toc-item-'+i).click(function(){
-			scrollToId(id);
+			Utils.scrollToId(id);
 		})		
 	})	
 
@@ -94,9 +107,9 @@ function initToc(){
 
 
 //滑动 固定Toc
-$(function(){
+function fixToc(){
 
-   if(isPC()){
+   if( Utils.isPc()){
 
    $(window).scroll(function () {
 
@@ -109,27 +122,32 @@ $(function(){
         });
    }
 
-})
+}
 
 
 function tocPosition(){
 
-		//获取 toc 容器 到 document 的 距离
-        var a = $(".toc-container").offset().top;      
-                          
-        if ( a < $(window).scrollTop() ) {
+		var $tc = $(".toc-container");
 
-            fixlayout($(".toc-container"));  
+		if( $tc.length >0 ){
 
-        }
-          		
-        if($(window).scrollTop() < 90){
-          	removelayout($(".toc-container"));
-		}                
+			//获取 toc 容器 到 document 的 距离
+			var a = $(".toc-container").offset().top;      
+							
+			if ( a < $(window).scrollTop() ) {
 
-		// 判断滚动条是否到底部 是的话则隐藏toc			
-		if(  checkIsHideToc() ){
-			removelayout($(".toc-container"));
+				fixlayout($(".toc-container"));  
+
+			}
+					
+			if($(window).scrollTop() < 90){
+				removelayout($(".toc-container"));
+			}                
+
+			// 判断滚动条是否到底部 是的话则隐藏toc			
+			if(  checkIsHideToc() ){
+				removelayout($(".toc-container"));
+			}
 		}
 }
 
@@ -227,4 +245,3 @@ function checkIsHideToc(){
 
 	return ( nav_height <= height/1.1 ) 
 }
-	

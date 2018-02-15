@@ -4,8 +4,8 @@
 
 	<div class="toc-container">	
 
-	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
-	<span><%= __('Contents')%></span>
+	<span id="toc-contents" class="toc-contents iconfont icon-open"> 
+		<span><%= __('Contents')%></span>
 	</span>
 
 	<ul class="toc-list"></ul>
@@ -14,5 +14,3 @@
 
 </div>
 <% } %>
-
-<%- js('scripts/toc.js')%>

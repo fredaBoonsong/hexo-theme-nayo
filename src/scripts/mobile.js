@@ -2,14 +2,15 @@
 //slide-menu
 //-----------
 
-$(function(){
+import Utils from './utils.js'
+module.exports = {
 
-		if( !isPC() ){ 
-
-			initSlideMenu()
-		
+	init: function(){
+		if( Utils.isPc()){
+			initSlideMenu()		
 		}
-})
+	}
+}
 	
 
 function initSlideMenu(){

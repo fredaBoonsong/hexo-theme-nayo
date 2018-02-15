@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html>
-  <%- partial('_partial/head') %> 
+  <%- partial('_partial/head') %>  
   <body> 
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
 
@@ -27,15 +27,12 @@
 
     <%- partial('_partial/search-container') %>
     <%- partial('_partial/slide-menu') %>     
-    <%- partial('_partial/footer') %> 
 
 
-   
+    <%- partial('_partial/footer') %>    
     <%- partial('_partial/after-footer') %> 
-    <!-- javascript --> 
-    <%- js('scripts/mobile.js') %>  
-    <%- js('scripts/utils.js') %>    
-    <%- js('scripts/main.js') %>  
-    <%- js('scripts/animation.js') %> 
+    
+    
+    <%- js('main.bundle')%>        
   </body>        
 </html>
