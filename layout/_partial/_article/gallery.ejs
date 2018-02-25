@@ -1,7 +1,7 @@
 <% if (post.banner){ %>
 			
-				<div class="banner-brg"  style="background-image:url(<%- url_for(post.banner) %>")>
-			    	<img class="banner-img" src="<%- url_for(post.banner) %>">
+				<div class="banner-brg"  style="background-image:url(<%- url_for(post.banner) %>)">
+			    	<img class="banner-img" src="<%- url_for(post.banner) %>"/>
 			    </div>	
 
 
@@ -12,8 +12,8 @@
 		<% for( i in post.photos){%>
 
 			<div class="gallery-box">
-				<a class="gallery-brg"  style="background-image:url(<%- url_for(post.photos[i]) %>")>
-			    	<img class="gallery-img" src="<%- url_for(post.photos[i]) %>">
+				<a class="gallery-brg"  style="background-image:url(<%- url_for(post.photos[i]) %>)">
+			    	<img class="gallery-img" src="<%- url_for(post.photos[i]) %>"/>
 			    </a>
 		    </div>
 

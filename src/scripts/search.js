@@ -1,51 +1,51 @@
-//------------------
-//search-container
-//------------------
+//----------
+//search
+//----------
 
 
 module.exports = {
 
-    init : function (){
+  init: function () {
 
-      $('.search-widget,.mobile-menu-search,#header-menu-search').click(function(){  
-        opContainer();
-      });    
+    $('.search-widget,.mobile-menu-search,#header-menu-search').click(function () {
+      opContainer();
+    });
 
-  
-      $('.search-cancel').click(function (){
-          opContainer();      
-      })
-    } 
+
+    $('.search-cancel').click(function () {
+      opContainer();
+    })
+  }
 
 }
 
-function opContainer(){
+function opContainer() {
 
-        const $sc = $('.search-container');
-        const $msk = $('.mask');      
+  const $sc = $('.search-container');
+  const $msk = $('.mask');
 
-        if($sc.is(':visible')){
+  if ($sc.is(':visible')) {
 
-          $sc.hide();
-          $msk.hide();
+    $sc.hide();
+    $msk.hide();
 
-          $('#search-input').val('');
-          $('#search-result').html('');
+    $('#search-input').val('');
+    $('#search-result').html('');
 
-        }else {
+  } else {
 
-          $sc.show();
-          $msk.show();
+    $sc.show();
+    $msk.show();
 
-          $('.search-input').focus();
-          search("/search.xml", 'search-input', 'search-result');
-        }
+    $('.search-input').focus();
+    search("/search.xml", 'search-input', 'search-result');
+  }
 }
 
 
 
 
-function search (path, search_id, content_id) {  
+function search(path, search_id, content_id) {
   $.ajax({
     url: path,
     dataType: "xml",
@@ -96,7 +96,7 @@ function search (path, search_id, content_id) {
                 }
                 if (i == 0) {
                   first_occur = index_content;
-                }               
+                }
               }
             });
           } else {
@@ -104,10 +104,10 @@ function search (path, search_id, content_id) {
           }
           // show search results
           if (isMatch) {
-            str +="<div class='search-item'>" ;
+            str += "<div class='search-item'>";
             str += "<a href='" + data_url + "' class='search-title'>" + data_title + "</a>";
             var content = data.content.trim().replace(/<[^>]+>/g, "");
-            if (first_occur >= 0) {       
+            if (first_occur >= 0) {
               var start = first_occur - 40;
               var end = first_occur + 60;
 
@@ -129,14 +129,14 @@ function search (path, search_id, content_id) {
               });
 
               str += "<p class=\"search-content\">" + match_content + "</p>"
-            }     
-            str += "</div>";    
+            }
+            str += "</div>";
           }
-        });     
+        });
         if (str.indexOf('<div') === -1) {
-          return $resultContent.innerHTML = "<div class='iconfont icon-nofound search-empty'>"+"</div>";
+          return $resultContent.innerHTML = "<div class='iconfont icon-nofound search-empty'>" + "</div>";
         }
-          $resultContent.innerHTML =  str;
+        $resultContent.innerHTML = str;
       });
     }
   });

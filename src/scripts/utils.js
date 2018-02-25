@@ -4,33 +4,37 @@
 
 
 module.exports = {
-    
-    isPc : isPc,
+
+    isPc: isPc,
     cutString: cutString,
     scrollToId: scrollToId
 }
 
-function isPc(){  
-    var userAgentInfo = navigator.userAgent;  
-    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
-    var flag = true;  
-    for (var v = 0; v < Agents.length; v++) {  
-    if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
-    }  
-    return flag;  
-}            
+function isPc() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
 
 
-function cutString( str , maxlength ){
+function cutString(str, maxlength) {
 
-	if( str.length > maxlength ) return str.substring(0,maxlength-1)+"...";
-	else
-		return str;
+    if (str.length > maxlength) return str.substring(0, maxlength - 1) + "...";
+    else
+        return str;
 
 }
 
-function scrollToId(id) {  
+function scrollToId(id) {
 
-  $("html,body").animate({
-  		scrollTop:$("#" + id).offset().top }, 400);   
+    $("html,body").animate({
+        scrollTop: $("#" + id).offset().top
+    }, 400);
 }

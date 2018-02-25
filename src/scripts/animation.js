@@ -1,9 +1,16 @@
 
+import Utils from './utils'
+
+
+
 module.exports = {
 
     init: function(){
+
+       
         initHoverSlide();
         initArticleScroll();
+        
     }    
 }
 
@@ -48,7 +55,7 @@ function initArticleScroll(){
 
     // get top of article
     var num = [];
-    for(var i = 0 ; i < obj.length ;  i++ ){
+    for(let i = 0 ; i < obj.length ;  i++ ){
 
         num.push( obj.eq(i).offset().top + ( objH/3 )); 
 

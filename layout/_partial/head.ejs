@@ -13,13 +13,12 @@
   }
   %>
   
-  <title><% if (title){ %>  <%= title %> | <% } %>  <%= theme.title %></title>
+  <title><% if (title){ %>  <%= title %> | <% } %>  <%= theme.title || config.title %> </title>
 
  
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- url_for(  theme.favicon ) %>">
   <% } %>
-
 
 
   <%- css('style.min.css') %> 

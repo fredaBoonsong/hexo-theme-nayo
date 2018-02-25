@@ -23,12 +23,6 @@ theme: Nayo
 
 来自歌曲 <东京不太热> -封茗囧菌
 
-
-## Changelog
-
-v1.0
-    webpack打包
-
 ## Other
 
 有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。

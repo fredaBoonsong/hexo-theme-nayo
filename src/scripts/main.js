@@ -1,8 +1,6 @@
 
 import Stlye from '../css/style.styl'
 
-
-
 require("expose-loader?$!./jquery.js")
 
 import Index from './index.js'
