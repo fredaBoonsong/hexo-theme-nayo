@@ -1,46 +1,17 @@
 
-import Utils from './utils'
-
-
-
 module.exports = {
 
-    init: function(){
-
-       
-        initHoverSlide();
-        initArticleScroll();
-        
-    }    
+    init: initArticleScroll     
+    
 }
 
-//------------------
-// animation
-// item-hover-slide
-//------------------
-
-function initHoverSlide(){
-
-   $('.animation-item').hover(
-
-   	function(){
-
-        $(this).removeClass('itemRIn').addClass('itemLIn');   
-
-   },function(){
-
-   	    $(this).removeClass('itemLIn').addClass('itemRIn'); 
-
-   });     
-}
-
-//------------------
+//----------------
 // index page
 // article scroll In
-// 2018-01-27
-//------------------
+//----------------
 
 function initArticleScroll(){
+
 
     // get window params
     var wH         = $(window).height();
@@ -61,12 +32,10 @@ function initArticleScroll(){
 
     }
 
-
-
     // the frist articles
     if( obj.eq(0) ){
 
-            obj.eq(0).addClass('scrollIn');
+        obj.eq(0).addClass('scrollIn');
 
     }
 
@@ -81,7 +50,6 @@ function initArticleScroll(){
             }
         }
     };
-    
     // init
     judgeScroll();
 
@@ -90,6 +58,5 @@ function initArticleScroll(){
         wH          = $(window).height();
         wScrollTop  = $(window).scrollTop();
         judgeScroll();
-    });
-
+    });    
 }

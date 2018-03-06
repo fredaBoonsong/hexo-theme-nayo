@@ -64,7 +64,7 @@ highlight_theme:
 # 站点访问统计
 # [ analytics id ]
 baidu_analytics:
-  #636802045446222199ae541e32c8133e 
+  636802045446222199ae541e32c8133e 
 google_analytics: 
 
 # busuanzi site count
@@ -80,6 +80,7 @@ disqus:
   shortname: lemonreds
 
 # valine(https://github.com/xCss/Valine)
+# 创建 leancloud 应用 获取 id|key 填入即可
 leancloud:  
   comment: true
   app_id: cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz
@@ -118,4 +119,4 @@ donate:
 
 #theme version
 version:
-  1.0
+  0.1.1
