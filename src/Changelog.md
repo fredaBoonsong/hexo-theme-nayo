@@ -2,6 +2,7 @@
 
 ### Fixed
 - Code block Error(because of hexo version)
+- Social links Error((because of hexo version))
 
 ### Changed
 - Adjust style
