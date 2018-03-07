@@ -1,5 +1,8 @@
 ## [0.1.1]
 
+### Fixed
+- Code block Error(because of hexo version)
+
 ### Changed
 - Adjust style
 
