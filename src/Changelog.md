@@ -1,11 +1,12 @@
 ## [0.1.1]
 
 ### Fixed
-- Code block Error(because of hexo version)
-- Social links Error((because of hexo version))
+- Code block error
+- Social links error
 
 ### Changed
 - Adjust style
+- Image display center
 
 ## [0.1.0]
 
