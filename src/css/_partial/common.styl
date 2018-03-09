@@ -24,31 +24,32 @@
     &:hover 
      color $thr-clr
   
+  
 //
 // paginator
 //
 .paginator
-  margin 4em 0 2em
-  padding 10px 0 
-  font-size .95rem
-  text-align center
-  letter-spacing 1px 
-.page-number     
-  margin 0 8px  
+		margin 5rem 0 2rem
+		font-size .95rem
+		text-align center
+		border-top 1px solid $line-clr
+		border-bottom 1px solid $line-clr
+	
+	
+.page-number,.prev,.next    
+	display inline-block
+	padding 12px 10px 
+	line-height 1
   &:hover        
     color $thr-clr 
-    
-.prev , .next
-   @extend $tags
-   padding 3px 12px
-  
+.prev,.next
+	margin 0 10px
 .prev  
   float left  
 .next  
   float right  
 .current    
   color $thr-clr  
-  
 
 ///
 // info

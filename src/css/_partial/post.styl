@@ -45,6 +45,7 @@
   @extend $tags
   cursor pointer
   padding 4px 12px
+  margin 2px 4px
   border-radius 50%  
  
     
@@ -105,27 +106,37 @@
 // post-nav
 // 
 .post-nav    
-    margin 1em 0 4em
-    padding-bottom 1em
-    overflow hidden  
-    font-weight 300   
-    font-size 1.2em  
-    border-bottom 1px solid #eee       
+    margin 1rem 0 6rem
+    padding .9rem 0  
+    overflow hidden    
+    border-top 1px solid $line-clr
+    border-bottom 1px solid $line-clr       
     text-align center
-.post-nav span
-    @extend $tags
-    font-size .95rem
+
+.post-nav span  
+    font-weight 300  
+    font-size 1.05rem
     padding 4px 12px
-    margin 0 .3rem 
+    margin 0 1rem 
+
+      
       
 //
 // comment
 //
 #comment
-    margin 1rem 0 4rem
+    margin 1.5rem 0 4rem
     padding-bottom 1rem
-    overflow hidden    
-    border-bottom 1px solid #eee          
+    position relative
+    &:before
+        content "Comment:"
+        position absolute
+        left 5px
+        top -35px
+        font-size 1.03rem
+        color $gray
+
+
 #comment div
     margin left     
 

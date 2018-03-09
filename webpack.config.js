@@ -1,10 +1,10 @@
- const path = require('path')
+ const path = require('path'),
 
- const webpack = require('webpack')
+     webpack = require('webpack'),
 
- const ExtractTextPlugin = require('extract-text-webpack-plugin')
+     ExtractTextPlugin = require('extract-text-webpack-plugin'),
 
- const CleanPlugin = require('clean-webpack-plugin')
+     CleanPlugin = require('clean-webpack-plugin');
 
  module.exports = {
      entry: {
@@ -36,8 +36,7 @@
                  test: /\.(styl|css)$/,
                  use: ExtractTextPlugin.extract({
                      fallback: 'style-loader',
-                     use: [
-                         {
+                     use: [{
                              loader: 'css-loader',
                              options: {
                                  importLoaders: 2,
