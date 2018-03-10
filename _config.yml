@@ -9,12 +9,6 @@ menu:
   about: about
   search: search
 
-
-# site color 
-# 配置站点的配色
-# [black blue brown purple red green]
-color: black  
-
 # site title 
 # 页面的标题
 # title为空时 Hexo/_config.yml 配置有效
@@ -53,12 +47,6 @@ social:
 # 文章的目录 仅识别 H1 和 H2/H3
 toc:
     true
-
-# code highlight style
-# 代码高亮风格
-# [normal night white]
-highlight_theme: 
-    normal
 
 # site analytics 
 # 站点访问统计

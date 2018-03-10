@@ -8,6 +8,7 @@
 - Adjust style(paginator)
 - Image display center
 
+
 ## [0.1.0]
 
 ### Added
