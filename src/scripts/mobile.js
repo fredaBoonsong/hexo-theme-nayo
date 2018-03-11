@@ -6,84 +6,80 @@ import Utils from './utils.js'
 
 module.exports = {
 
-	init: function(){
-		if( !Utils.isPc() ){
-			
-			initSlideMenu();		
-		}		
+	init: function () {
+		if (!Utils.isPc()) {
+			initSlideMenu();
+		}
 	}
 }
-	
 
-function initSlideMenu(){
+function initSlideMenu() {
 
-		const  $toggle = $(this);				
-		const  $mask   = $('.mask');
+	const  	$toggle = $('.mobile-toggle'),
+		  	$menuSearch = $('.mobile-menu-search'),
+		  	$mask = $('.mask');
 
-		$('.mobile-toggle').click(function(){				
+	$toggle.click(() => {
+		showMenu();
+	})
 
-				showMenu($toggle,$mask);	
-
-				$mask.click(function(){
-				hideMenu($toggle,$mask);												
-				});
+	for (let e of [$mask, $menuSearch]) {
+		e.click(() => {
+			hideMenu();
 		})
+	}
+}
 
-		$('.mobile-menu-search').click(function(){	
-				hideMenu($toggle,$mask);	
-		})
-
-}	
-
-function showMenu( $icon , $mask){
+const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
 
 	$icon
-	.removeClass('icon-menu')
-	.addClass('icon-no-menu');
-	
-	$('.mobile-menu').show()
-	.removeClass('menuSlideOut').addClass('menuSlideIn');
+		.removeClass('icon-menu')
+		.addClass('icon-no-menu');
+
+	$('.mobile-menu')
+		.show()
+		.removeClass('menuSlideOut')
+		.addClass('menuSlideIn');
 
 	$('.header')
-	.removeClass('slide-left')
-	.addClass('slide-right');
+		.removeClass('slide-left')
+		.addClass('slide-right');
 
 	$('.container')
-	.removeClass('slide-left')
-	.addClass('slide-right');
+		.removeClass('slide-left')
+		.addClass('slide-right');
 
 	$('#footer')
-	.removeClass('slide-left')
-	.addClass('slide-right');
+		.removeClass('slide-left')
+		.addClass('slide-right');
 
 
 	$mask.show();
-
 }
 
 
 
-function hideMenu( $icon , $mask){
+const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
 
 	$icon
-	.removeClass('icon-no-menu')
-	.addClass('icon-menu');
+		.removeClass('icon-no-menu')
+		.addClass('icon-menu');
 
 	$('.mobile-menu')
-	.removeClass('menuSlideIn')
-	.addClass('menuSlideOut');
-	
+		.removeClass('menuSlideIn')
+		.addClass('menuSlideOut');
+
 
 	$('.header')
-	.removeClass('slide-right')
-	.addClass('slide-left');
+		.removeClass('slide-right')
+		.addClass('slide-left');
 	$('.container')
-	.removeClass('slide-right')
-	.addClass('slide-left');
+		.removeClass('slide-right')
+		.addClass('slide-left');
 
 	$('#footer')
-	.removeClass('slide-right')
-	.addClass('slide-left');
+		.removeClass('slide-right')
+		.addClass('slide-left');
 
-	$mask.hide();	
+	$mask.hide();
 }

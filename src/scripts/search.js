@@ -7,12 +7,12 @@ module.exports = {
 
   init: function () {
 
-    $('.search-widget,.mobile-menu-search,#header-menu-search').click(function () {
+    $('.search-widget,.mobile-menu-search,#header-menu-search').click(()=> {
       opContainer();
     });
 
 
-    $('.search-cancel').click(function () {
+    $('.search-cancel').click(()=> {
       opContainer();
     })
   }
@@ -21,8 +21,8 @@ module.exports = {
 
 function opContainer() {
 
-  const $sc = $('.search-container');
-  const $msk = $('.mask');
+  const $sc = $('.search-container'),
+        $msk = $('.mask');
 
   if ($sc.is(':visible')) {
 

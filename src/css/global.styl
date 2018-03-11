@@ -96,19 +96,8 @@ time
     height 100%
     top 16%
     left 80%     
-    overflow hidden  
-
-
-  
-  
-toc = hexo-config("toc")
-
-if toc is false
-  #toc
-     display none
-     
-#toc      
-  @media mq-mobile 
+    overflow hidden
+    @media mq-mobile 
       display none
 
 
@@ -137,3 +126,9 @@ if toc is false
     box-shadow  inset 0 0 6px rgba(0,0,0,.3)  
     -webkit-box-shadow inset 0 0 6px rgba(0,0,0,.3)  
     background-color #555  
+
+
+.inactive-item	
+    color #676767
+    &:link,&:visited,&:active 
+      color #676767

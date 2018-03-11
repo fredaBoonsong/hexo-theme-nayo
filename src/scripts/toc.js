@@ -20,7 +20,7 @@ function addListener() {
 
 	if ($tc.length > 0) {
 
-		$tc.click(function () {
+		$tc.click(() => {
 
 			if ($tc.hasClass("icon-open")) {
 
@@ -215,8 +215,7 @@ function itemHighLigth(text) {
 }
 //toc 小标题的高亮
 function subItemHighLigth(text) {
-	$('.toc-subitem').each(function (i) {
-
+	$('.toc-subitem').each(function () {
 
 		if ($(this).hasClass('toc-sub-active')) {
 			$(this).removeClass('toc-sub-active');
@@ -230,18 +229,15 @@ function subItemHighLigth(text) {
 
 // 获取元素到浏览器顶部的距离
 function getOffsetTop($obj) {
-	const mTop = $obj.offset().top;
-	const sTop = $(window).scrollTop();
-	const result = mTop - sTop;
+	const 	mTop = $obj.offset().top;
+			sTop = $(window).scrollTop(),
+			result = mTop - sTop;
 	return result;
 }
 
 function checkIsHideToc() {
 
-	const height = $(window).height();
-
-	const nav_height = $('.post-nav').offset().top - $(document).scrollTop();
-
-
-	return (nav_height <= height / 1.1)
+	const 	height = $(window).height(),
+			nav_height = $('.post-nav').offset().top - $(document).scrollTop();
+	return (nav_height <= height / 1.1);
 }

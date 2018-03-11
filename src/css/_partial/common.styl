@@ -39,15 +39,23 @@
 	display inline-block
 	padding 12px 10px 
 	line-height 1
-  &:hover        
-    color $thr-clr 
+
+.page-number:hover  
+  color $thr-clr 
+
 .prev,.next
-	margin 0 10px
+	margin 0 10px 
+	letter-spacing .8px
+	&:link,&:visited,&:active 
+      color $light-gray
+	&:hover        
+   	  color $thr-clr 
+	
 .prev  
   float left  
 .next  
   float right  
-.current    
+.current  
   color $thr-clr  
 
 ///
@@ -74,7 +82,7 @@
 	height 90px
 	border-radius 50%
 .author
-	margin .825rem 0  .5rem 
+	margin .825rem 0  .3rem 
 	text-align center	
 	font-size 1.125rem
 .location

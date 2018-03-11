@@ -52,7 +52,7 @@ toc:
 # 站点访问统计
 # [ analytics id ]
 baidu_analytics:
-  636802045446222199ae541e32c8133e 
+  #636802045446222199ae541e32c8133e 
 google_analytics: 
 
 # busuanzi site count
@@ -86,8 +86,8 @@ share_item:
 - douban
 - facebook
 - twitter
-- tumblr
-- google
+#- tumblr
+#- google
 
 
 # donate
@@ -102,9 +102,9 @@ donate:
 # fancybox
 # https://github.com/fancyapps/fancybox
 # fancybox:
-#  true
+# true
 
 
 #theme version
 version:
-  0.1.1
+  0.1.2
