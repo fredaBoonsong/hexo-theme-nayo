@@ -16,7 +16,8 @@ module.exports = {
 
 function addListener() {
 
-	const $tc = $('#toc-contents');
+	const $tc = $('.toc-contents'),
+		  $tl = $('.toc-list');
 
 	if ($tc.length > 0) {
 
@@ -24,11 +25,11 @@ function addListener() {
 
 			if ($tc.hasClass("icon-open")) {
 
-				$('.toc-list').hide();
+				$tl.hide();
 				$tc.removeClass("icon-open").addClass("icon-close");
 			} else {
 
-				$('.toc-list').show();
+				$tl.show();
 				$tc.removeClass("icon-close").addClass("icon-open");
 			}
 		});
@@ -153,10 +154,7 @@ function tocPosition() {
 
 // 更换到绝对布局
 function fixlayout($obj) {
-
-	//if(overflowCheck()){
-	$obj.addClass('toc-fixed');
-	//}
+	$obj.addClass('toc-fixed');	
 }
 // 清空之前的绝对布局
 function removelayout($obj) {
@@ -229,7 +227,7 @@ function subItemHighLigth(text) {
 
 // 获取元素到浏览器顶部的距离
 function getOffsetTop($obj) {
-	const 	mTop = $obj.offset().top;
+	const 	mTop = $obj.offset().top,
 			sTop = $(window).scrollTop(),
 			result = mTop - sTop;
 	return result;

@@ -1,35 +1,37 @@
 <div class="post-footer">    
 
-  <%- partial('_partial/_post/donate') %> 
-  <%- partial('_partial/_post/mob_share') %>
+<%- partial('_partial/_post/donate') %> 
+<%- partial('_partial/_post/mob_share') %>
 
-   <nav class="post-nav">
+<% if (page.prev || page.next ) { %>
 
-      
-       <% if (page.prev) { %>
-
-        <% var title = truncate(page.prev.title , {length:60}) %> 
+  <nav class="post-nav">
 
       
-          <a href="<%- url_for(page.prev.path) %>">          
+  <% if (page.prev) { %>
 
-            <span class="left" title="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>  
+  <% var title = truncate(page.prev.title , {length:60}) %> 
 
-          </a>
+      
+    <a href="<%- url_for(page.prev.path) %>">          
+
+     <span class="left" title="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>  
+
+    </a>
     
-      <% } %>
+  <% } %>
     
-      <% if (page.next) { %>
+  <% if (page.next) { %>
 
-         <% var title = truncate(page.next.title, {length:60}) %>
+  <% var title = truncate(page.next.title, {length:60}) %>
 
-          <a href="<%- url_for(page.next.path) %>">         
+  <a href="<%- url_for(page.next.path) %>">         
 
-           <span class="right"  title="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
+    <span class="right"  title="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
 
-          </a>
+  </a>
 
-      <% } %>
-
+  <% } %>
   </nav>  
+<% } %>
 </div>
