@@ -163,29 +163,29 @@ function removelayout($obj) {
 
 //开启所有的Toc跟踪
 function openTocFollow() {
-	$('.itemFollow').each(function (i) {
+	$('.itemFollow').each(function () {
 		if (getOffsetTop($(this)) <= 40) {
-			var text = $(this).text();
+			let text = $(this).text();
 			itemHighLigth(text);
 		}
 	})
 
-	$('.itemSubFollow').each(function (j) {
+	$('.itemSubFollow').each(function () {
 		if (getOffsetTop($(this)) <= 60) {
-			var text = $(this).text();
+			let text = $(this).text();
 			subItemHighLigth(text);
 		}
 	})
 }
 //清除所有的Toc跟踪
 function resetTocFollow() {
-	$('.toc-item').each(function (i) {
+	$('.toc-item').each(function () {
 
 		if ($(this).hasClass('toc-active')) {
 			$(this).removeClass('toc-active');
 		}
 	})
-	$('.toc-subitem').each(function (i) {
+	$('.toc-subitem').each(function () {
 
 		if ($(this).hasClass('toc-sub-active')) {
 			$(this).removeClass('toc-sub-active');
@@ -215,12 +215,12 @@ function itemHighLigth(text) {
 function subItemHighLigth(text) {
 	$('.toc-subitem').each(function () {
 
-		if ($(this).hasClass('toc-sub-active')) {
-			$(this).removeClass('toc-sub-active');
+		if ($(this).hasClass('toc-active')) {
+			$(this).removeClass('toc-active');
 		}
 		//增加新的item
 		if ($(this).text().trim() == text) {
-			$(this).addClass('toc-sub-active');
+			$(this).addClass('toc-active');
 		}
 	})
 }

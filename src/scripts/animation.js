@@ -1,7 +1,6 @@
 
 module.exports = {
-    init: initArticleScroll     
-    
+    init: initArticleScroll         
 }
 
 //----------------
@@ -48,7 +47,7 @@ function initArticleScroll(){
                 }
             }
         }
-    };
+    }
     // init
     judgeScroll();
 

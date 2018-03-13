@@ -26,19 +26,19 @@ function initMenu() {
     // find the clicked menu
     var clicked_menu = $('#header-menu-home');
 
-    if (href.indexOf("archives") > 0) {
+    if (href.indexOf('archives') > 0) {
 
         clicked_menu = $('#header-menu-archives');
 
-    } else if (href.indexOf("categories") > 0) {
+    } else if (href.indexOf('categories') > 0) {
 
         clicked_menu = $('#header-menu-categories');
 
-    } else if (href.indexOf("tags") > 0) {
+    } else if (href.indexOf('tags') > 0) {
 
         clicked_menu = $('#header-menu-tags');
 
-    } else if (href.indexOf("about") > 0) {
+    } else if (href.indexOf('about') > 0) {
 
         clicked_menu = $('#header-menu-about');
 
@@ -134,5 +134,5 @@ function setHeader() {
 
 
 // just say hi....
-console.log("%c Nayo %c", "background:#000; color:#fff", "", "山水一程 三生有幸");
-console.log("%c Mail %c", "background:#000; color:#fff", "", "lemonreds@163.com ");
+console.log('%c Nayo %c', 'background:#000; color:#fff', '', '山水一程 三生有幸');
+console.log('%c Mail %c', 'background:#000; color:#fff', '', 'lemonreds@163.com ');

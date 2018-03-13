@@ -1,7 +1,6 @@
 
 import Stlye from '../css/style.styl'
 
-require("expose-loader?$!./jquery.js")
 
 import Index from './index.js'
 import Anm from './animation.js'
@@ -10,6 +9,7 @@ import Search from './search.js'
 
 import Post from './post.js'
 
+const $ = require('expose-loader?$!./jquery.js')
 
 $(function(){
 
@@ -17,6 +17,5 @@ $(function(){
     Mobile.init();
     Search.init();
     Anm.init();
-    Post.init()
-
-});
+    Post.init();
+})

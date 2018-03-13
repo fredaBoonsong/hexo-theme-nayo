@@ -13,7 +13,7 @@ module.exports = {
 
 function isPc() {
     var userAgentInfo = navigator.userAgent;
-    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var Agents = new Array('Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod');
     var flag = true;
     for (var v = 0; v < Agents.length; v++) {
         if (userAgentInfo.indexOf(Agents[v]) > 0) {
@@ -27,7 +27,7 @@ function isPc() {
 
 function cutString(str, maxlength) {
 
-    if (str.length > maxlength) return str.substring(0, maxlength - 1) + "...";
+    if (str.length > maxlength) return str.substring(0, maxlength - 1) + '...';
     else
         return str;
 
@@ -35,8 +35,8 @@ function cutString(str, maxlength) {
 
 function scrollToId(id) {
 
-    $("html,body").animate({
-        scrollTop: $("#" + id).offset().top
+    $('html,body').animate({
+        scrollTop: $('#' + id).offset().top
     }, 400);
 }
 
@@ -48,7 +48,7 @@ function scrollToId(id) {
 function registerHoverItem($links) {
 
     if( typeof ($links.each) !== 'function') {
-        console.log($links + " not support 'each' ");
+        console.log($links + ' not support \'each\' ');
         return;
     }
     $links.each(function (i) {
