@@ -5,7 +5,7 @@
     <% var  date_format = config.date_format  %>
 
     <% var last %> 
-    <ul>
+
     <% page.posts.each(function (post) { %>
       <% var year = post.date.year() %>
 
@@ -18,20 +18,17 @@
 		    <%}%>
 
 
-        <li>
+        <div class="archive-item">
           <span class="archive-time"> <%= date(post.date, date_format || "YYYY-MM-DD") %> </span>
 
           <span class="archive-title">
           <a href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
           </span>
 
-        </li>
-     
-
+        </div>
 
     <% }) %>
 
-    </ul>
 
 </section>
 

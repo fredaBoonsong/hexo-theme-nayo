@@ -31,7 +31,7 @@ function initPost() {
 //post页面标题跟踪
 function initPostTitle() {
 
-    if (!Utils.isPc()) return;
+    if (!Utils.isPc) return;
 
     //初始化
     var $logo = $('.header-logo'),

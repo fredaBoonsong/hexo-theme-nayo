@@ -34,7 +34,7 @@ pre {
 
 .highlight {
   @extend $code-block;
-  border-radius: 3px;
+  border-radius: 1px;
   position relative;
 
   pre {
@@ -70,10 +70,13 @@ pre {
   }
 
   .gutter pre {
-    padding-left: 10px
-    padding-right: 10px   
-    text-align: right
-    background-color: $highlight-background
+    padding-left 10px
+    padding-right 10px   
+    text-align right
+    font-size  $number-font-size
+    background-color $highlight-gutter-bgcolor 
+    color $highlight-gutter-color
+    font-family $number-font-family
   }
 
   .code pre {
@@ -103,7 +106,7 @@ pre {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; 
 }
 
 .gist table {

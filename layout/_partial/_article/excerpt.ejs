@@ -13,6 +13,10 @@
 	  <% } %>  
 </div>
 
-<div class="article-info">
-	<%- partial('_partial/_common/info',{ post:post}) %>		
-</div>
+<%  var length = post.content.replace(/<\/?[^>]*>/g, "").replace(/ /g,'').length %>
+
+<% if( post.banner || length > 70 ) {%>
+	<div class="article-info">
+		<%- partial('_partial/_common/info',{ post:post}) %>		
+	</div>
+<%}%>

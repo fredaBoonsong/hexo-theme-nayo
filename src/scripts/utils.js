@@ -5,17 +5,18 @@
 
 module.exports = {
 
-    isPc: isPc,
+    isPc: isPc(),
     cutString: cutString,
     scrollToId: scrollToId,
     registerHoverItem: registerHoverItem
 }
 
 function isPc() {
-    var userAgentInfo = navigator.userAgent;
-    var Agents = new Array('Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod');
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
+
+    const userAgentInfo = navigator.userAgent,
+        Agents = new Array('Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod');
+    let flag = true;
+    for (let v = 0; v < Agents.length; v++) {
         if (userAgentInfo.indexOf(Agents[v]) > 0) {
             flag = false;
             break;
@@ -47,7 +48,7 @@ function scrollToId(id) {
  */
 function registerHoverItem($links) {
 
-    if( typeof ($links.each) !== 'function') {
+    if (typeof ($links.each) !== 'function') {
         console.log($links + ' not support \'each\' ');
         return;
     }

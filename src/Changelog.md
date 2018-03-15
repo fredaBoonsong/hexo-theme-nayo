@@ -1,4 +1,13 @@
 
+## [0.1.3]
+
+### Changed
+- 文章摘要过短 隐藏tag/cate/word
+- 修改代码块样式
+### Added
+- gallery.js
+- 支持繁体
+
 ## [0.1.2]
 
 ### Changed
@@ -11,8 +20,8 @@
 ## [0.1.1]
 
 ### Fixed
-- Code block 显示错误
-- Social links 的报错
+- 代码块样式错误
+- Social links 错误
 
 ### Changed
 - 调整了(paginator)样式

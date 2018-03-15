@@ -7,7 +7,7 @@ import Utils from './utils.js'
 module.exports = {
 
     init: function () {
-        if (!Utils.isPc()) {
+        if (!Utils.isPc) {
             initSlideMenu();
         }
     }

@@ -99,12 +99,7 @@ donate:
   wechat: /images/donate1.png
   alipay: /images/donate2.png
 
-# fancybox
-# https://github.com/fancyapps/fancybox
-# fancybox:
-# true
-
 
 #theme version
 version:
-  0.1.2
+  0.1.3

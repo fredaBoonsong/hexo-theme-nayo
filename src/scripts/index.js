@@ -54,7 +54,7 @@ function initHeader() {
 
     $(window).scroll(function () {
 
-        if (Utils.isPc()) {
+        if (Utils.isPc) {
             slideHeader();
         }
 

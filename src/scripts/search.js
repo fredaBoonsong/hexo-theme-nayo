@@ -7,16 +7,15 @@ module.exports = {
 
     init: function () {
 
-        $('.search-widget,.mobile-menu-search,#header-menu-search').click(()=> {
+        $('.search-widget,.mobile-menu-search,#header-menu-search').click(() => {
             opContainer();
         });
 
 
-        $('.search-cancel').click(()=> {
+        $('.search-cancel').click(() => {
             opContainer();
         })
     }
-
 }
 
 function opContainer() {
@@ -37,7 +36,7 @@ function opContainer() {
         $sc.show();
         $msk.show();
 
-        $('.search-input').focus();
+        $('#search-input').focus();
         search('/search.xml', 'search-input', 'search-result');
     }
 }
@@ -55,7 +54,7 @@ function search(path, search_id, content_id) {
                 return {
                     title: $('title', this).text(),
                     content: $('content', this).text(),
-                    url: $('url', this).text()
+                    url: $('link', this).attr('href')
                 };
             }).get();
 
@@ -71,7 +70,7 @@ function search(path, search_id, content_id) {
                 }
                 // perform local searching
                 datas.forEach(function (data) {
-                    var isMatch = true;                   
+                    var isMatch = true;
                     if (!data.title || data.title.trim() === '') {
                         data.title = 'Untitled';
                     }

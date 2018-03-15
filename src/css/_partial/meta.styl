@@ -59,28 +59,20 @@
 //
 // archive
 //
-.archive
-	padding 0 0rem
-	& ul
-		list-style-type none
-		margin 0
-		padding 0
-		& li
-			margin 0			
-			position relative		
-			padding 1.8rem 0 1.8rem 4rem	
-		
 
-			
-.archive ul li:after	
-	position absolute
-	content " "
-	bottom 0
-	left 2%
-	width 96%
-	height .4px
-	background $line-clr	
-	    		    
+
+.archive-item			
+	position relative		
+	padding 1.4rem 0 1.4rem 4rem
+	&:before	
+		position absolute
+		content " "
+		bottom 0
+		left 2%
+		width 96%
+		height .4px
+		background $line-clr	
+						
 
 .archive-year	
 	font-size 1.2rem
@@ -91,7 +83,7 @@
 .archive-time		
 	position  absolute
 	left 6rem
-	top 34px
+	top 28px
 	font-size 1rem
 	line-height 1
 	color rgba(0,0,0,.5)
