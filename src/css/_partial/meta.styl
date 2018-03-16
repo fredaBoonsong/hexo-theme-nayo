@@ -3,19 +3,11 @@
 // tag 
 //
 
-.meta-block
-	overflow hidden
-	margin .6em  .6em 0 .8em
 	
 .meta-name	
 	margin 1em 	
 	letter-spacing 1px
 	font-size 1rem 
-
-
-//
-// tag 	
-//
 	
 .tag-wrap	
 	@extend $tags  
@@ -24,18 +16,21 @@
 	padding  2px 12px	
 .tag-name
 	font-size 0.825rem
+
+.tag-count
+	font-size 0.75rem
 	
 //
 // cate
 // 
 .cate-container
-	clearfix()	
+	overflow hidden	
 	& > div		
 		column(4,12)
 			
 .cate-inner
 	padding .8rem
-	margin .5rem 1rem 1.8rem 1rem
+	margin .5rem 1rem 2rem 1rem
 	border 1px solid $line-clr
 	border-radius 4px
 	overflow hidden	
@@ -59,8 +54,6 @@
 //
 // archive
 //
-
-
 .archive-item			
 	position relative		
 	padding 1.4rem 0 1.4rem 4rem

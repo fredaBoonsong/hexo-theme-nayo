@@ -1,20 +1,10 @@
 <% if (post.banner){ %>
 			
-	<div class="banner-brg"  style="background-image:url(<%- url_for(post.banner) %>)">
-		<img class="banner-img" src="<%- url_for(post.banner) %>"/>
-	</div>	
+	<div class="banner"  style="background-image:url(<%- url_for(post.banner) %>)"></div>
+
 <% } else if (post.photos && post.photos.length){ %>
-
-	<div class="article-gallery">
-
-		<% for( i in post.photos){%>
-
-			<div class="gallery-box">
-				<a class="gallery-brg"  style="background-image:url(<%- url_for(post.photos[i]) %>)">
-			    	<img class="gallery-img" src="<%- url_for(post.photos[i]) %>"/>
-			    </a>
-		    </div>
-
-	    <%}%>
-   </div>
+	
+	<% for( i in post.photos){%>
+		<div class="gallery" style="background-image:url(<%- url_for(post.photos[i]) %>)"></div>
+	<%}%>  
 <%}%>

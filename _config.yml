@@ -21,7 +21,7 @@ title: Nayo
 # author为空时 Hexo/_config.yml 配置有效
 profile: 
   logo: Nayo
-  author: Lemonreds
+  author: Lemon
   avatar: /images/header.jpg  
   location: GuangZhou CN
 
@@ -55,11 +55,6 @@ baidu_analytics:
   636802045446222199ae541e32c8133e 
 google_analytics: 
 
-# busuanzi site count
-# 底部访客记录
-busuanzi:
-  false
-
 # comment
 
 # disqus(https://disqus.com/)
@@ -87,7 +82,7 @@ share_item:
 - facebook
 - twitter
 #- tumblr
-#- google
+- google
 
 
 # donate
@@ -100,6 +95,18 @@ donate:
   alipay: /images/donate2.png
 
 
+# footer
+# 底部信息
+footer:
+  author: Lemon
+  since: 2017
+
+# busuanzi site count
+# 底部访客记录
+busuanzi:
+  false
+
+
 #theme version
 version:
-  0.1.3
+  0.1.4

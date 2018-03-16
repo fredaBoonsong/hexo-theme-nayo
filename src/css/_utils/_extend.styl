@@ -1,4 +1,5 @@
 
+
 $border
   background $white
   border 1px solid $line-clr 
@@ -9,12 +10,6 @@ $oneline
   text-overflow ellipsis
   overflow hidden
   white-space nowrap
-
-$block
-  margin .8em 0 
-  padding  .6em
-.block
-  @extend $block
   
 $tags
   margin 3px 2px
@@ -26,7 +21,7 @@ $tags
   border-radius 999em 
   transition all .2s ease
   &:visited,&:active,&:link
-    color rgba(0,0,0,.7)   
+    color $black 
   &:hover
     background rgba(255,255,255,.2)
     color $thr-clr
@@ -52,12 +47,41 @@ $toRight
         left 0
         width  100%
 
-
-absolute-center(width, height = width)  
-  width: width
-  height: height
-  position: absolute
-  top: 50%
-  left: 50%
-  margin-top: height * -0.5
-  margin-left: width * -0.5
+$tips
+  position relative  
+  &:hover:before,
+  &:hover:after
+    position absolute
+    content attr(data-hover) 
+    bottom: 130% 
+    left 50%
+    padding 8px 6px
+    width 180px
+    margin-left -90px
+    font-size: 1.05rem
+    box-sizing border-box
+    color #fafafa !important
+    background #565656
+    text-shadow 0 -1px 0 rgba(0,0,0,1) 
+    border 1px solid $line-clr
+    border-radius 4px
+    text-align center
+    animation-fill-mode forwards
+    animation-name tipsAnimation
+    animation-duration .2s
+$tips-min
+    @extend $tips
+    &:hover:before,
+    &:hover:after
+      padding 4px 3px
+      width 100px
+      margin-left -50px
+      font-size: .95rem
+   
+@keyframes tipsAnimation
+    0%
+        transform translateY(8px) 
+        opacity .9  
+    100%
+        transform translateY(0) 
+        opacity 1

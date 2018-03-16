@@ -11,7 +11,9 @@ Page:
   Tags: 标签
   About: 关于
 
-Post:
+Post: 
+  Donate: 赞赏
+  Share: 分享
   Prev: 上一篇
   Next: 下一篇
   
@@ -20,7 +22,7 @@ Paginator:
   Next: 下一页
 
 Contents: 目录
-Read_more: 阅读更多
+ReadMore: 阅读更多
 Untitled: 无标题
  
 Search:

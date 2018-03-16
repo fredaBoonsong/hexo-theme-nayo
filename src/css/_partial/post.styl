@@ -43,11 +43,10 @@
 // button
 //
 .donate-btn,.share-btn 
-  @extend $tags
+  @extend $tips-min
   cursor pointer
-  padding 4px 12px
-  margin 2px 4px
-  border-radius 50%   
+  padding 6px 12px
+
 //-------------donate
 #donate-box  
   display none
@@ -106,17 +105,19 @@
 // 
 .post-nav    
     margin 1rem 0 6rem
-    padding .9rem 0  
-    overflow hidden    
+    padding .9rem 0      
     border-top 1px solid $line-clr
-    border-bottom 1px solid $line-clr       
+    border-bottom 1px solid $line-clr  
+    height 30px     
     text-align center
 
-.post-nav span  
+.post-nav span   
+    @extend $tips
     font-weight 300  
     font-size 1.05rem
     padding 4px 12px
-    margin 0 1rem 
+    margin 0 1rem     
+  
 
       
       
@@ -133,7 +134,7 @@
         left 5px
         top -35px
         font-size 1.03rem
-        color $gray
+        color gray
 
 
 #comment div

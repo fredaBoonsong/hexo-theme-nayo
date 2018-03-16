@@ -1,21 +1,13 @@
 
-## [0.1.3]
+# hexo-theme-nayo Changelog
 
-### Changed
-- 文章摘要过短 隐藏tag/cate/word
-- 修改代码块样式
-### Added
-- gallery.js
-- 支持繁体
 
-## [0.1.2]
 
-### Changed
-- 调整了样式
-- 删除了部分配置
+## [0.1.0]
 
 ### Added
-- 图标的hover效果
+- Packaged by Webpack
+- All
 
 ## [0.1.1]
 
@@ -27,8 +19,32 @@
 - 调整了(paginator)样式
 - 图片居中显示了
 
-## [0.1.0]
+## [0.1.2]
 
 ### Added
-- Packaged by Webpack
-- All
+- 图标的hover效果
+
+### Changed
+- 调整了样式
+- 删除了部分配置
+
+## [0.1.3]
+
+### Added
+- gallery.js
+- 支持繁体
+### Changed
+- 文章摘要过短 隐藏tag/cate/word
+- 修改代码块样式
+
+## [0.1.4]
+
+### Added
+- tips样式
+- 可配置footer信息
+
+### Changed
+- [返回顶部]样式修改
+
+### Removed
+- 删除了一些样式

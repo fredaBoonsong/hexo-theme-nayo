@@ -5,14 +5,13 @@
 import Utils from './utils.js'
 import Toc from './toc.js'
 
+
 module.exports = {
 
     init: () => {
 
-        initPost();
-
+        initPost(); 
         Toc.init();
-
         Utils.registerHoverItem($('.-mob-share span'));
     }
 

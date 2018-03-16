@@ -12,8 +12,11 @@ Page:
   About: About
 
 Post:
+  Donate: Donate
+  Share: Share
   Prev: Prev
   Next: Next
+  
   
 Paginator: 
   Prev: Prev
@@ -21,7 +24,7 @@ Paginator:
 
 
 Contents: Contents
-Read_more: Continue
+ReadMore: Continue
 Untitled: Untitled
 
 Search:

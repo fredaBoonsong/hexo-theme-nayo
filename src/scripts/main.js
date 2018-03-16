@@ -17,5 +17,5 @@ $(function () {
     Search.init();
     Anm.init();
     Post.init();
-    new Gallery();
+    new Gallery($('.banner,.gallery,img'));    
 })

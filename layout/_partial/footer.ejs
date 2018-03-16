@@ -1,5 +1,3 @@
-<% var year = date(new Date(), 'YYYY') %>
-
 <footer id="footer">
 	   
    	 
@@ -18,15 +16,24 @@
 			     </div>
 	 <% }  %>	
    	
+	   
       	 
+
+	<% var since = theme.footer.since %>
+	<% var year = date(new Date(), 'YYYY') %>
+
 	 <div>
 	 	&copy;
-		<%= year %>
-		<%= theme.profile.author || config.author  %>	 
+		<% if (since < year){%>		
+		<%= since %>-
+		<% }%>
+		<%= year %>			
+	
+		
+		<%= theme.footer.author || theme.profile.author || config.author %>	 
 
 	 </div>
-
-
+	
    
    	 <div>
 	
