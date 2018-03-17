@@ -57,7 +57,6 @@ function initHeader() {
         if (Utils.isPc) {
             slideHeader();
         }
-
         resetBackToTop();
     });
 }
@@ -89,18 +88,16 @@ function resetBackToTop() {
     //back to top  
     if ($(window).scrollTop() > 800) {
         $('#backTop')
-            .addClass('slideRIn')
             .show();
     } else {
-        $('#backTop')
-            .removeClass('slideRIn')
+        $('#backTop')         
             .hide();
     }
 }
 
 
 function initBackToTop() {
-    $('#backTop').click(function () {
+    $('#backTop').click(()=> {
         $('html,body')
             .animate({
                 scrollTop: 0

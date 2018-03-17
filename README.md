@@ -19,10 +19,6 @@ or dowanload zip and rename Nayo into **yourblog/themes/**
 theme: Nayo
 ```
 
-## Theme Name 
-
-来自歌曲 <东京不太热> -封茗囧菌
-
 ## Modify theme
 
 install dependencies
@@ -39,6 +35,11 @@ build once
 ```
 npm run build
 ```
+
+## Theme Name 
+
+来自歌曲 <东京不太热> -封茗囧菌
+
 
 ## Other
 

@@ -48,35 +48,36 @@ $toRight
         width  100%
 
 $tips
-  position relative  
-  &:hover:before,
-  &:hover:after
-    position absolute
+  position relative 
+  &:hover:before,&:hover:after  
+    position absolute  
+    animation-fill-mode forwards
+    animation-name tipsAnimation
+    animation-duration .2s 
+  &:hover:before
+    content ' '
+    border 8px solid transparent
+    border-top 8px solid #565656 
+    top -30% 
+    left 50%
+    margin-left -4px
+    margin-top -2px
+    width 0
+    height 0
+  &:hover:after    
     content attr(data-hover) 
-    bottom: 130% 
+    bottom 130% 
     left 50%
     padding 8px 6px
     width 180px
     margin-left -90px
-    font-size: 1.05rem
+    font-size 1.05rem
     box-sizing border-box
     color #fafafa !important
     background #565656
-    text-shadow 0 -1px 0 rgba(0,0,0,1) 
-    border 1px solid $line-clr
+    text-shadow 0 -1px 0 rgba(0,0,0,1)    
     border-radius 4px
-    text-align center
-    animation-fill-mode forwards
-    animation-name tipsAnimation
-    animation-duration .2s
-$tips-min
-    @extend $tips
-    &:hover:before,
-    &:hover:after
-      padding 4px 3px
-      width 80px
-      margin-left -40px
-      font-size: .95rem
+    
    
 @keyframes tipsAnimation
     0%
