@@ -21,13 +21,14 @@ function initSlideMenu() {
 
     $toggle.click(() => {
         showMenu();
+        for (let e of [$mask, $menuSearch]) {
+            e.click(() => {
+                hideMenu();
+            })
+        }
     })
 
-    for (let e of [$mask, $menuSearch]) {
-        e.click(() => {
-            hideMenu();
-        })
-    }
+  
 }
 
 const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {

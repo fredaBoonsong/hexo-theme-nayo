@@ -23,6 +23,23 @@ theme: Nayo
 
 来自歌曲 <东京不太热> -封茗囧菌
 
+## Modify theme
+
+install dependencies
+```
+npm init
+```
+
+modify theme
+```
+npm run dev
+```
+
+build once
+```
+npm run build
+```
+
 ## Other
 
 有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
