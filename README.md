@@ -23,7 +23,7 @@ theme: Nayo
 
 install dependencies
 ```
-npm init
+npm install 
 ```
 
 modify theme

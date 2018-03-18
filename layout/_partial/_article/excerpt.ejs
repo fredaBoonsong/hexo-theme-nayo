@@ -7,7 +7,7 @@
 	  
 </div>
 
-<%  var length = post.content.replace(/<\/?[^>]*>/g, "").replace(/ /g,'').length %>
+<%  var length = raw_length(post.content) %>
 
 <% if( post.banner || length > 70 ) {%>
 	<div class="article-info">

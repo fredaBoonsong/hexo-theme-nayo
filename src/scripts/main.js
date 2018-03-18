@@ -2,10 +2,11 @@ import Stlye from '../css/style.styl'
 
 
 import Index from './index.js'
-import Anm from './animation.js'
+import Anm from './animate.js'
 import Mobile from './mobile.js'
 import Search from './search.js'
 import Post from './post.js'
+import Hover from './hover.js'
 
 import Gallery from './gallery.js'
 
@@ -17,5 +18,6 @@ $(function () {
     Search.init();
     Anm.init();
     Post.init();
-    new Gallery($('.banner,.gallery,img'));    
+    Hover.init();
+    Gallery.init();
 })

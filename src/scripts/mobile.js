@@ -6,31 +6,27 @@ import Utils from './utils.js'
 
 module.exports = {
 
-    init: function () {
+    init: function initSlideMenu() {
         if (!Utils.isPc) {
-            initSlideMenu();
+            const $toggle = $('.mobile-toggle'),
+                $menuSearch = $('.mobile-menu-search'),
+                $mask = $('.mask');
+
+            $toggle.click(() => {
+                showMenu();               
+            })
+
+            for (let e of [$mask, $menuSearch]) {
+                e.click(() => {
+                    hideMenu();
+                })
+            }
         }
     }
 }
-
-function initSlideMenu() {
-
-    const  	$toggle = $('.mobile-toggle'),
-        $menuSearch = $('.mobile-menu-search'),
-        $mask = $('.mask');
-
-    $toggle.click(() => {
-        showMenu();
-        for (let e of [$mask, $menuSearch]) {
-            e.click(() => {
-                hideMenu();
-            })
-        }
-    })
-
-  
-}
-
+//
+// style in header.styl
+//
 const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
 
     $icon
@@ -69,7 +65,6 @@ const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
     $('.mobile-menu')
         .removeClass('menuSlideIn')
         .addClass('menuSlideOut');
-
 
     $('.header')
         .removeClass('slide-right')

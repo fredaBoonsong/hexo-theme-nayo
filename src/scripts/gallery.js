@@ -2,7 +2,16 @@ import Style from '../css/_import/gallery.styl'
 
 import Utils from './utils'
 
-module.exports = Gallery;
+module.exports = {
+
+    init: function () {
+        // 开启Gallery的格式
+        let galleryElements = $('.banner,.gallery,img');
+        new Gallery(galleryElements);
+
+    }
+};
+
 
 function Gallery(elements) {
 
@@ -10,7 +19,6 @@ function Gallery(elements) {
 
         elements = document.getElementsByTagName('img');
     }
-
 
     this.config = {
             width: window.innerWidth * 0.66,
@@ -56,7 +64,7 @@ Gallery.prototype = {
 
 
         gContainer.className = style.container;
-        gBox.className = style.box ;
+        gBox.className = style.box;
         gImg.className = style.img;
 
         if (element.tagName.toLowerCase() === 'img') {
@@ -67,7 +75,7 @@ Gallery.prototype = {
             gImg.src = src;
         }
 
-        this.setStyle([gBox,gImg], width, height);
+        this.setStyle([gBox, gImg], width, height);
 
         gBox.appendChild(gImg)
         gContainer.appendChild(gBox)
@@ -77,7 +85,7 @@ Gallery.prototype = {
 
 
         document.getElementsByTagName('body')[0].appendChild(gContainer);
-    },  
+    },
     setStyle: function (elements, width, height, center) {
 
         elements.forEach(element => {

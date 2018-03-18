@@ -18,25 +18,20 @@ function addListener() {
 	const $tc = $('.toc-contents'),
 		$tl = $('.toc-list');
 
-	if ($tc.length > 0) {
+	//默认隐藏toc
+	$tl.hide();
 
-		$tc.click(() => {
-
-			if ($tc.hasClass("icon-open")) {
-
-				$tl.hide();
-				$tc.removeClass("icon-open").addClass("icon-close");
-			} else {
-
-				$tl.show();
-				$tc.removeClass("icon-close").addClass("icon-open");
-			}
-		});
-		//默认关闭
-		$tc.click();
-	}
+	$tc.click(() => {
+		
+		if ($tl.is(':visible')) {
+			$tl.hide();
+			$tc.removeClass("icon-open").addClass("icon-close");
+		} else {
+			$tl.show();
+			$tc.removeClass("icon-close").addClass("icon-open");
+		}
+	});
 }
-
 
 
 function initToc() {

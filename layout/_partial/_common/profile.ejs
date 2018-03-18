@@ -2,7 +2,7 @@
 
 <div class="profile sildeUpMin">
 
-	<img class="avatar" src="<%- url_for(profile.avatar) %>"  alt="No Avatar.">
+	<img class="avatar" data-hover='sdad' src="<%- url_for(profile.avatar) %>"  alt="No Avatar.">
 					
 		<p class="author"><%= profile.author || config.author %></p>
 
@@ -12,10 +12,9 @@
 	
 		<div class="social">
    		<% for (var i in theme.social) { %>   
-   		 	
-		<a class="iconfont icon-<%= i %>" target="_blank" href="<%- (theme.social[i]) %>" title="<%= i %>">
-		
-		</a>
+   		<span data-hover="<%= i %>">
+		<a class="iconfont icon-<%= i %>" target="_blank" href="<%- (theme.social[i]) %>" >		
+		</a></span>
 	    <% } %>
     </div>		
 </div>

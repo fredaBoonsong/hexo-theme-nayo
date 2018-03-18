@@ -15,7 +15,7 @@
       
     <a href="<%- url_for(page.prev.path) %>">          
 
-     <span class="left" data-hover="<%= title || '(no title)' %>">  <%= __('Post.Prev') %> </span>  
+     <span class="left" data-hover="<%= title ||  __('Untitled') %>">  <%= __('Post.Prev') %> </span>  
 
     </a>
     
@@ -27,7 +27,7 @@
 
   <a href="<%- url_for(page.next.path) %>">         
 
-    <span class="right" data-hover="<%= title || '(no title)' %>"><%=__('Post.Next')%> </span>  
+    <span class="right" data-hover="<%= title ||  __('Untitled') %>"><%=__('Post.Next')%> </span>  
 
   </a>
 

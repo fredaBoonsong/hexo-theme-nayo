@@ -6,15 +6,12 @@
 module.exports = {
 
     init: function () {
-
-        $('.search-widget,.mobile-menu-search,#header-menu-search').click(() => {
+        //
+        //  出发搜索的DOM
+        //
+        $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
             opContainer();
         });
-
-
-        $('.search-cancel').click(() => {
-            opContainer();
-        })
     }
 }
 

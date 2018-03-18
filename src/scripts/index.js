@@ -8,103 +8,86 @@ import Utils from './utils'
 module.exports = {
 
     init: function () {
-
-        initMenu();
-        initHeader();
-        initBackToTop();
-
-        Utils.registerHoverItem( $('.social a'));
-
+        initActiveMenu();
+        listenerScroll();
     }
 }
 
+/**
+ * 
+ * 当前页面 header-menu-link 样式
+ * 
+ */
+function initActiveMenu() {
 
-// set clicked menu underline
-function initMenu() {
-    // get the url
-    var href = window.location.href;
-    // find the clicked menu
-    var clicked_menu = $('#header-menu-home');
+    let href = window.location.href,
+        acitveClass = 'header-menu-active',
+        activeMenuItem = 'home';
 
-    if (href.indexOf('archives') > 0) {
+    let pagesType = ['home', 'archives', 'categories', 'tags', 'about'];
 
-        clicked_menu = $('#header-menu-archives');
+    for (let type of pagesType) {
 
-    } else if (href.indexOf('categories') > 0) {
-
-        clicked_menu = $('#header-menu-categories');
-
-    } else if (href.indexOf('tags') > 0) {
-
-        clicked_menu = $('#header-menu-tags');
-
-    } else if (href.indexOf('about') > 0) {
-
-        clicked_menu = $('#header-menu-about');
-
+        if (href.indexOf(type) > 0) {
+            activeMenuItem = type;
+            break;
+        }
     }
-    // set clicked menu underline and color 	 
-    clicked_menu.addClass('header-menu-active');
+    $('#header-menu-'.concat(activeMenuItem)).addClass(acitveClass);
 }
 
 
-var last_scroll = 0
+/**
+ * 监听滚动条事件
+ * - Header   上划下滑
+ * - BacktoTop 显示隐藏
+ */
+function listenerScroll() {
 
-function initHeader() {
+    // 记录上次滑动的位置
+    let last_scroll = 0,
+        $backTop = $('#backTop');
 
+    // 监听滚动条
     $(window).scroll(function () {
-
-        if (Utils.isPc) {
-            slideHeader();
-        }
+        resetHeader();
         resetBackToTop();
+        last_scroll = $(window).scrollTop();
     });
-}
 
-function slideHeader() {
+    // 注册 BacktoTop 点击事件
+    (function backTopClick() {
+        $backTop.click(() => {
+            $('html,body')
+                .animate({
+                    scrollTop: 0
+                }, 600);
+        });
+    })();
 
-    var _scroll
-    var _last = last_scroll
 
-    if (_last != 0) {
+    let resetBackToTop = function () {
+        $(window).scrollTop() > 800 ? $backTop.show() : $backTop.hide()
+    };
 
-        _scroll = $(window).scrollTop();
-
-        if (_scroll <= 0) {
-            setHeader();
-        } else if (_scroll - _last > 0) {
-            //下滑
-            hideHeader();
-        } else {
-            //上划
-            showHeader();
+    let resetHeader = function () {
+        if (Utils.isPc) {
+            let scroll = $(window).scrollTop(),
+                last = last_scroll;
+            //
+            //  判断滚动条的位置
+            //  1 未移动: fix Header
+            //  2 下滑 :  hide Header
+            //  3 上滑:  show Header
+            scroll <= 0 ? fixedHeader() : ((scroll - last > 0) ? hideHeader() : showHeader());
         }
     }
-    last_scroll = _scroll
 }
 
 
-function resetBackToTop() {
-    //back to top  
-    if ($(window).scrollTop() > 800) {
-        $('#backTop')
-            .show();
-    } else {
-        $('#backTop')         
-            .hide();
-    }
-}
-
-
-function initBackToTop() {
-    $('#backTop').click(()=> {
-        $('html,body')
-            .animate({
-                scrollTop: 0
-            }, 600);
-    });
-}
-
+/**
+ * Header下滑
+ */
 function showHeader() {
 
     $('.header')
@@ -115,20 +98,24 @@ function showHeader() {
 
 }
 
+/**
+ * Header上滑
+ */
 function hideHeader() {
     $('.header')
         .addClass('slideUp')
         .removeClass('slideDown');
 }
+/**
+ * Header 固定
+ */
+function fixedHeader() {
 
-function setHeader() {
-
-    $('.header').removeClass('header-fixed')
-        .addClass('header-static')
+    $('.header').addClass('header-static')
+        .removeClass('header-fixed')
         .removeClass('slideUp')
         .removeClass('slideDown');
 }
-
 
 // just say hi....
 console.log('%c Nayo %c', 'background:#000; color:#fff', '', '山水一程 三生有幸');

@@ -32,15 +32,14 @@ favicon: /images/favicon.png
 
 # social link
 social:  
-  github: https://github.com/Lemonreds  
-  zhihu:
-  weibo:
-#  segmentfault: 
-  facebook:
-  twitter:
-  instagram:
-  linkedin:
-  others:
+  Github: https://github.com/Lemonreds  
+  Zhihu:
+  Weibo:
+  Facebook:
+  Twitter:
+  Instagram:
+  LinkedIn:
+  Others:
 
 
 # toc

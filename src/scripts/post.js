@@ -11,8 +11,7 @@ module.exports = {
     init: () => {
 
         initPost(); 
-        Toc.init();
-        Utils.registerHoverItem($('.-mob-share span'));
+        Toc.init();       
     }
 
 }

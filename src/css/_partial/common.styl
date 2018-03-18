@@ -52,6 +52,7 @@
 	padding-bottom 16px
 	text-align center		
 	& .avatar
+		@extend $tips
 		display block
 		width 94px
 		height 94px
@@ -66,7 +67,9 @@
 		color $black
 	& .social
 		text-align center
-		font-size 1.125rem	
+		font-size 1.125rem
+		& span
+			@extends $tips-min 	
 
 
 .item	
