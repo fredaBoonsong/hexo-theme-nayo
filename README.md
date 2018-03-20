@@ -19,6 +19,18 @@ or dowanload zip and rename Nayo into **yourblog/themes/**
 theme: Nayo
 ```
 
+## Theme Name 
+
+来自歌曲 <东京不太热> -封茗囧菌
+
+
+## Other
+
+有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
+
+当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
+
+
 ## Modify theme
 
 install dependencies
@@ -35,14 +47,3 @@ build once
 ```
 npm run build
 ```
-
-## Theme Name 
-
-来自歌曲 <东京不太热> -封茗囧菌
-
-
-## Other
-
-有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
-
-当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)

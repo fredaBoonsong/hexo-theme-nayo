@@ -7,7 +7,8 @@ module.exports = {
 
     isPc: isPc(),
     scrollToId: scrollToId,
-  
+    createMask: createMask
+
 }
 
 function isPc() {
@@ -30,4 +31,17 @@ function scrollToId(id) {
     $('html,body').animate({
         scrollTop: $('#' + id).offset().top
     }, 400);
+}
+
+function createMask() {
+
+    let $mask = $('.mask');
+    if ($mask.length === 0 ) {
+        let mask = document.createElement('div');
+        mask.className = 'mask';   
+        document.getElementsByTagName('body')[0].appendChild(mask);
+        $mask = $(mask);
+    } 
+
+    return $mask;
 }

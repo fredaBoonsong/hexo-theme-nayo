@@ -93,6 +93,14 @@ donate:
   wechat: /images/donate1.png
   alipay: /images/donate2.png
 
+# mathjax 
+# 渲染LateX公式
+# 在post文章头部添加:
+#   mathjax: true
+# 即可在当前post开启mathjax
+mathjax:
+  enable: true
+  
 
 # footer
 # 底部信息
@@ -108,4 +116,4 @@ busuanzi:
 
 #theme version
 version:
-  0.1.4
+  0.1.5

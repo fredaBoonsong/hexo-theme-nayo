@@ -10,8 +10,8 @@ module.exports = {
 
     init: () => {
 
-        initPost(); 
-        Toc.init();       
+        initPost();
+        Toc.init();
     }
 
 }
@@ -59,14 +59,15 @@ function initPostTitle() {
 function initDonate() {
 
     const $btn = $('.donate-btn'),
-        $donate_box = $('#donate-box'),
-        $mask = $('.mask');
+        $donate_box = $('#donate-box');
+    let $mask;
 
     const $cancel = $('.donate-cancel'),
         $donate_wechat = $('.icon-donate-wechat'),
         $donate_alipay = $('.icon-donate-alipay');
 
     $btn.click(() => {
+        $mask = Utils.createMask();
 
         if ($donate_box.is(':visible')) {
             $donate_box.hide();
@@ -74,23 +75,20 @@ function initDonate() {
             $donate_box.show();
             $mask.show();
             showDonateQR($('.icon-donate-wechat'));
-
-
-            for (let e of [$mask, $cancel]) {
-                e.click(() => {
-                    $donate_box.hide();
-                    $mask.hide();
-                })
-            }
-
-            for (let e of [$donate_wechat, $donate_alipay]) {
-                e.click(() => {
-                    showDonateQR(e);
-                })
-            }
-
+        }
+        for (let e of [$mask, $cancel]) {
+            e.click(() => {
+                $donate_box.hide();
+                $mask.remove();
+            })
         }
     })
+
+    for (let e of [$donate_wechat, $donate_alipay]) {
+        e.click(() => {
+            showDonateQR(e);
+        })
+    }
 
     //显示Donate二维码
     const showDonateQR = function ($icon) {

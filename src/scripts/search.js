@@ -2,12 +2,13 @@
 //search
 //----------
 
+import Utils from './utils'
 
 module.exports = {
 
     init: function () {
         //
-        //  出发搜索的DOM
+        //  触发搜索的DOM
         //
         $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
             opContainer();
@@ -17,13 +18,13 @@ module.exports = {
 
 function opContainer() {
 
-    const $sc = $('.search-container'),
-        $msk = $('.mask');
+    const $sc = $('.search-container');
+    let   $msk = Utils.createMask();
 
     if ($sc.is(':visible')) {
 
         $sc.hide();
-        $msk.hide();
+        $msk.remove();
 
         $('#search-input').val('');
         $('#search-result').html('');

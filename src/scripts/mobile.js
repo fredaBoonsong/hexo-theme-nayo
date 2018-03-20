@@ -9,18 +9,19 @@ module.exports = {
     init: function initSlideMenu() {
         if (!Utils.isPc) {
             const $toggle = $('.mobile-toggle'),
-                $menuSearch = $('.mobile-menu-search'),
-                $mask = $('.mask');
+                $menuSearch = $('.mobile-menu-search');
+            let $mask;
+
 
             $toggle.click(() => {
-                showMenu();               
+                $mask = Utils.createMask();
+                showMenu();
+                for (let e of [$mask, $menuSearch]) {
+                    e.click(() => {
+                        hideMenu();
+                    })
+                }
             })
-
-            for (let e of [$mask, $menuSearch]) {
-                e.click(() => {
-                    hideMenu();
-                })
-            }
         }
     }
 }
@@ -77,5 +78,5 @@ const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
         .removeClass('slide-right')
         .addClass('slide-left');
 
-    $mask.hide();
+    $mask.remove();
 }
