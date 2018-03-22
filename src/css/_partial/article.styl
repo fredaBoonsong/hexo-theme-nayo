@@ -2,41 +2,48 @@
 
 .article 
   margin 0px 0 80px
-  padding 20px 0 50px
+  padding 18px 0 
   border-bottom 1px solid $line-clr
   opacity 0 
 
 .article-header   
-   margin-bottom 1rem
+   margin-bottom 1.2rem
    text-align center
    & time
      color rgba(0,0,0,.5)   
       
 .article-title     
     display block      
-    font-size 1.85rem
+    font-size 1.9rem
     padding 0 6px
-    margin-bottom .8rem   
+    margin-bottom .90rem   
  
-.article-excerpt   
+.article-excerpt
     margin 0
-    padding 12px 10px   
-    font-size 1rem      
-
-.article-info
-    text-align center 
-    margin .5rem 0
-  
+    padding 1rem .5rem   
+    font-size 1rem   
+    & a
+      color $thr-clr !important  
+      &:hover    
+        color $main-clr !important  
+    
 .article-readmore 
     display block
-    float right
-    margin 0 1rem 0      
-    font-size .9rem 
+    width 66px
+    margin 1.8rem auto 0 auto
+    font-size .85rem 
     letter-spacing .8px
+    padding 10px 12px
+    text-align center
+    border-radius 444rem
+    border 1px solid $line-clr
+    background rgba(255,255,255,.1)
     &:link,&:visited,&:active 
       color $light-gray
     &:hover
-      color $thr-clr         
+      color #fafafa
+      background-color #707070
+
     
 
  

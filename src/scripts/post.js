@@ -122,10 +122,18 @@ function initShare() {
 
     $share_btn.click(() => {
 
+        let $mask = Utils.createMask();
+
         if ($iconShare.is(':visible')) {
             $iconShare.hide();
+            $mask.remove();
         } else {
+            $mask.show();
             $iconShare.show();
+            $mask.click(() => {
+                $iconShare.hide();
+                $mask.remove();
+            })
         }
     });
 }

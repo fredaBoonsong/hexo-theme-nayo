@@ -1,4 +1,4 @@
-<div class="post-content article-excerpt">	
+<div class="article-excerpt">	
 	
   <%- partial('_partial/_article/gallery',{post:post}) %>	
 
@@ -7,10 +7,4 @@
 	  
 </div>
 
-<%  var length = raw_length(post.content) %>
-
-<% if( post.banner || length > 70 ) {%>
-	<div class="article-info">
-		<%- partial('_partial/_common/info',{ post:post,length:length}) %>		
-	</div>
-<%}%>
+<a class="article-readmore" href="<%- url_for(post.path) %>"><%= __('ReadMore') %></a> 

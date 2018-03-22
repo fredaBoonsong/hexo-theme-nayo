@@ -1,7 +1,7 @@
 
 .post-time,.post-words,.post-visitor,.post-meta
   @extend $oneline  
-  font-size .85rem  
+  font-size .9rem  
   color $black    
   margin-right 1.5rem
 
@@ -12,7 +12,7 @@
 		margin 0
 
 .category-link,.tag-link	
-    font-size .85rem 
+    font-size .95rem 
     font-family $font
   
 
@@ -54,15 +54,18 @@
 		display block
 		width 94px
 		height 94px
+		padding 4px
+		border 1px solid $line-clr
 		border-radius 50%
 	& .author
 		margin .825rem 0 .25rem 
 		text-align center	
 		font-size 1.125rem
 	& .location
-		margin 0 
+		margin 0
 		font-size .8rem
-		color $black
+		font-family $time-font 
+		color $black  
 	& .social
 		text-align center
 		font-size 1.125rem
@@ -80,12 +83,13 @@
 .item-date		
 	float left
 	width 25%
+	color $black
 	text-align right
 
 .item-title
 	float left
 	margin-left 5%		
 	width 70%	
-	font-size 1.05rem	
+	font-size 1.1rem	
 	&:hover		
 		color $thr-clr
