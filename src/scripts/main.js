@@ -1,6 +1,5 @@
 import Stlye from '../css/style.styl'
 
-
 import Index from './index.js'
 import Anm from './animate.js'
 import Mobile from './mobile.js'
@@ -10,11 +9,11 @@ import Hover from './hover.js'
 
 import Gallery from './gallery.js'
 
-import LazyLoad from './lazyload.js'
 
 const $ = require('expose-loader?$!./jquery.js')
 
-$(function () {
+$(function () { 
+
     Index.init();
     Mobile.init();
     Search.init();
@@ -22,5 +21,4 @@ $(function () {
     Post.init();
     Hover.init();
     Gallery.init();
-    LazyLoad.init();
 })

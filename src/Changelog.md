@@ -56,10 +56,7 @@
 ### Fixed
 - 遮罩层显示bug
 
-## [0.1.6]
-
-### Added
-- lazyload.js
+## [0.1.7]
 
 ### Changed
 - 调整了大部分样式
