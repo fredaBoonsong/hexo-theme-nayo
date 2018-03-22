@@ -58,5 +58,8 @@
 
 ## [0.1.6]
 
+### Added
+- lazyload.js
+
 ### Changed
 - 调整了大部分样式

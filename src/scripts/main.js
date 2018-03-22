@@ -10,6 +10,8 @@ import Hover from './hover.js'
 
 import Gallery from './gallery.js'
 
+import LazyLoad from './lazyload.js'
+
 const $ = require('expose-loader?$!./jquery.js')
 
 $(function () {
@@ -20,4 +22,5 @@ $(function () {
     Post.init();
     Hover.init();
     Gallery.init();
+    LazyLoad.init();
 })
