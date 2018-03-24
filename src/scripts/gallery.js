@@ -67,9 +67,12 @@ Gallery.prototype = {
         gBox.className = style.box;
         gImg.className = style.img;
 
-        if (element.tagName.toLowerCase() === 'img') {
+
+        let src = element.getAttribute('src');
+        if (src) {
             gImg.src = element.getAttribute('src');
         } else {
+
             let bgr = element.style.backgroundImage,
                 src = bgr.substring(6, bgr.length - 2);
             gImg.src = src;

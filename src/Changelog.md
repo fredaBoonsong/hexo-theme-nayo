@@ -1,5 +1,5 @@
 
-# hexo-theme-nayo Changelog
+# Changes Log
 
 
 
@@ -60,3 +60,11 @@
 
 ### Changed
 - 调整了大部分样式
+
+## [0.1.8]
+
+### Added
+- 重新支持 Lazyload.js
+
+### Changed
+- 重做了部分样式

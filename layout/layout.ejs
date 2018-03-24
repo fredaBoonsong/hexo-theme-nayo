@@ -8,11 +8,11 @@
       
         <% if (is_post() || is_home()) { %>
 
-          <section id="main">  
+          <section class="main">  
 
         <% } else{ %>
 
-          <section id="main" class="slideDownMin" >
+          <section class="main slideDownMin" >
 
         <% }%>
 
@@ -27,13 +27,10 @@
 
 
     <%- partial('_partial/search-container') %>
-    <%- partial('_partial/slide-menu') %>     
-
-
-    <%- partial('_partial/footer') %>    
-    <%- partial('_partial/after-footer') %> 
-    
+    <%- partial('_partial/slide-menu') %>        
+    <%- partial('_partial/after-footer') %>     
     
     <%- js('main.bundle')%>        
+    <%- partial('_partial/footer') %>   
   </body>        
 </html>

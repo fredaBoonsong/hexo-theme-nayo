@@ -43,7 +43,7 @@ module.exports = {
             judgeScroll();
 
             // update window params
-            $(window).scroll(function () {
+            $(window).scroll( ()=> {
                 wH = $(window).height();
                 wScrollTop = $(window).scrollTop();
                 judgeScroll();

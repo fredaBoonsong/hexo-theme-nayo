@@ -17,19 +17,21 @@
 
       <div class="cate-container">
         <% site.categories.sort('length',-1).each( function ( category ){%>           
-          <div>       
+             
 
+            <a  href="<%- url_for(category.path)%>">    
               <div class="cate-inner">
-                <a class="cate-name" href="<%- url_for(category.path)%>">               
-                  
-                    <span class="iconfont icon-category"></span> <%- category.name %>                
+
+                <div class="cate-info">  
+                     <span class="iconfont icon-category"></span>       
+                     <span class="cate-name"><%- category.name %></span>            
                  
-                </a>  
+                </div>  
                
                   <span class="cate-count"><%- category.length %> <span class="iconfont icon-posts"/></span> 
 
               </div>
-          </div>          
+            </a>
           
          <%}) %>
 

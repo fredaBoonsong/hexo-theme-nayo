@@ -22,22 +22,15 @@ p
 	font-size 16px	
 
 
-//container 
+ 
 .container	
 	display block	
-.container,#main
+.container,.main
 	clear both
 	width 98%	
 	margin 1rem 0 
 	padding 0 .4em 
 
-//block
-.block
-	margin 0
-//toc
-#toc
-	display none
-//header
 .header
 	width 100%
 .header-nav
@@ -46,26 +39,15 @@ p
 	position relative
 	text-align center	
 .header-logo
-	display inline-block
-	font-size 22px	
-	margin 0 auto 
-	position relative
-	left -12px
-
-
-.header-title
-	width auto
-	max-width 50%
-	font-size 18px
+	display none
 .header-menu
 	display none
-//mobile menu	
 .mobile-toggle
 	display inline
 
 .profile
 	& .location
-		margin .5rem 0
+		margin .3rem 0
 		color $black  
 //post
 .post
@@ -100,7 +82,7 @@ p
 	left 3%
 	margin-left 0
 	border-radius 6px	
-	//article	
+
 .article
 	margin 10px 0 40px 0
 	padding 10px 0
@@ -116,14 +98,6 @@ p
 .article-excerpt p
 	margin 12px 0		
 
-//cate
-.cate-container
-	clearfix()	
-	& > div		
-		column(6,12)
-			
-.cate-inner
-	padding 10px
 
 //item
 .item 
@@ -150,36 +124,28 @@ p
 	margin 1rem 0 
 	& a
 		font-size 1.1rem
-//cate
+
 .cate-inner
 	margin 0 .5rem 1rem 
-//tag
+.cate-info
+	margin-left 0
 .tag-wrap 
-	margin 2px 0 8px 0	
+	margin 3px 0 8px
 
-//gallery
-.gallery
-	display block
-	margin-bottom .4rem
-	width 100%
 
-//page title
-.page-title
-	display none
-	
-//paginator
-.prev,.next 
-	font-size 14px
-//footer
 #footer
 	display block
 	padding 10px
-#footer div
-	margin 0
+	& > div
+		margin 0
+.meta-info
+	text-align left 
+	& *
+		font-size .8rem
+		margin-right .5rem
 
-//search
-.search-widget
-	display none
+	
+
 .search-container	
 	position fixed 
 	margin 0 auto
@@ -187,11 +153,5 @@ p
 	top 0
 	width 100%
 	min-height 100%
-	border-radius 0
 .search-input
 	width 80%
-.search-result
-	padding 4px
-	overflow hidden
-.search-item
-	margin 4px 4px 6px 4px	

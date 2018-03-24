@@ -9,16 +9,20 @@ import Hover from './hover.js'
 
 import Gallery from './gallery.js'
 
+import Lazyload from './lazyload'
+
 
 const $ = require('expose-loader?$!./jquery.js')
 
-$(function () { 
+$(function () {
 
-    Index.init();
-    Mobile.init();
-    Search.init();
-    Anm.init();
-    Post.init();
-    Hover.init();
-    Gallery.init();
+
+    let init = (funcs => {
+
+        for (let fn of funcs) {
+            fn.init();
+        }
+
+    })([Index, Mobile, Search, Anm, Post, Lazyload,Hover, Gallery]);
+
 })
