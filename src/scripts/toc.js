@@ -4,13 +4,13 @@
 
 import Utils from './utils'
 
-module.exports = {
+exports.init = () => {
 
-	init: function () {
-		initToc();
-		addListener();
-		fixToc();
-	}
+
+	initToc();
+	addListener();
+	fixToc();
+
 }
 
 function addListener() {
@@ -22,7 +22,7 @@ function addListener() {
 	$tl.hide();
 
 	$tc.click(() => {
-		
+
 		if ($tl.is(':visible')) {
 			$tl.hide();
 			$tc.removeClass("icon-open").addClass("icon-close");
@@ -174,6 +174,6 @@ function getOffsetTop($obj) {
 
 function checkIsHideToc() {
 	const height = $(window).height(),
-		nav_height = $('.post-nav').offset().top - $(document).scrollTop();
+		nav_height = $('.post-footer').offset().top - $(document).scrollTop();
 	return (nav_height <= height / 1.1);
 }

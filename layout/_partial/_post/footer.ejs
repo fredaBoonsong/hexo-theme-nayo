@@ -1,38 +1,27 @@
-<div class="post-footer">    
+<% var profile = theme.profile %>
 
-<%- partial('_partial/_post/donate') %> 
-<%- partial('_partial/_post/mob_share') %>
+<div class="post-footer">
+     
+  <div class="pf-left">
+      <img class="pf-avatar" src="<%- url_for(profile.avatar) %>">
+      <p class="pf-des"><%= profile.description || profile.author || config.author %></p>
+  </div>
 
-<% if (page.prev || page.next ) { %>
-
-  <nav class="post-nav">
-
-      
-  <% if (page.prev) { %>
-
-  <% var title = truncate(page.prev.title , {length:60}) %> 
-
-      
-    <a href="<%- url_for(page.prev.path) %>">          
-
-     <span class="left" data-hover="<%= title ||  __('Untitled') %>">  <%= __('Post.Prev') %> </span>  
-
-    </a>
-    
-  <% } %>
-    
-  <% if (page.next) { %>
-
-  <% var title = truncate(page.next.title, {length:60}) %>
-
-  <a href="<%- url_for(page.next.path) %>">         
-
-    <span class="right" data-hover="<%= title ||  __('Untitled') %>"><%=__('Post.Next')%> </span>  
-
-  </a>
-
-  <% } %>
-  </nav>  
-<% } %>
-
+  <div class="pf-right">           
+      <div class="pf-links">
+        <%- partial('_partial/_post/donate') %> 
+        <%- partial('_partial/_post/mob_share') %>
+      </div>  
+    <nav class="pf-paginator">
+      <% if (page.prev) { %>
+        <% var title = truncate(page.prev.title , {length:60}) %> 
+          <a href="<%- url_for(page.prev.path) %>" data-hover="<%= title ||  __('Untitled') %>"><%= __('Post.Prev') %></a>      
+       <% } %>     
+        
+      <% if (page.next) { %>
+        <% var title = truncate(page.next.title, {length:60}) %>
+        <a href="<%- url_for(page.next.path) %>" data-hover="<%= title ||  __('Untitled') %>"> <%=__('Post.Next')%></a>
+      <% } %>      
+  </nav>   
+  </div>
 </div>

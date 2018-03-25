@@ -4,7 +4,7 @@
 menu:
   home: /
   archives: archives
-  categories: categories  
+#  categories: categories  
   tags: tags
   about: about
   search: search
@@ -24,6 +24,7 @@ profile:
   author: Lemon
   avatar: /images/header.jpg  
   location: GuangZhou CN
+  description: hi,i am lemon
 
 # site favicon
 # source/imgaes/
@@ -51,7 +52,7 @@ toc:
 # 站点访问统计
 # [ analytics id ]
 baidu_analytics:
-  636802045446222199ae541e32c8133e 
+  #636802045446222199ae541e32c8133e 
 google_analytics: 
 
 # comment

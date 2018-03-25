@@ -92,17 +92,14 @@ let LazyLoad = (function () {
 })();
 
 
-module.exports = {
+exports.init = () => {
 
-    init: function () {
+    let imgs = document.getElementsByClassName('lazyload')
 
-        let imgs = document.getElementsByClassName('lazyload')
+    HTMLCollection.prototype.forEach = function (cb) {
+        Array.prototype.slice.call(this).forEach(cb);
+    };
 
-        HTMLCollection.prototype.forEach = function (cb) {
-            Array.prototype.slice.call(this).forEach(cb);
-        };
+    new LazyLoad(imgs);
 
-        new LazyLoad(imgs);
-
-    }
 }

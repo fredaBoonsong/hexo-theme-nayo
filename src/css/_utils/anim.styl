@@ -133,15 +133,35 @@
   animation-duration: .6s  
 
 
-@keyframes rotate45 {
-  from{
-    transform rotate(-90deg)
-  } 
-  to{
-    transform rotate(0)
-  } 
+@keyframes leftIn{
+  from {
+  transform translateX(100px)
+  opacity 0
+  }
+  to {
+  transform translateX(0px)
+  opacity 1
+  }
 }
-.rotate45
-  animation-fill-mode: forwards
-  animation-name: rotate45
-  animation-duration: .6s
+
+.leftIn
+  animation-fill-mode forwards
+  animation-name leftIn
+  animation-duration .8s
+
+
+@keyframes rightOut{
+  from {
+  transform translateX(0px)  
+  opacity 1
+  }
+  to {
+  transform translateX(100px)
+  opacity 0
+  }
+}
+
+.rightOut
+  animation-fill-mode forwards
+  animation-name rightOut
+  animation-duration .8s

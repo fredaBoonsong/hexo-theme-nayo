@@ -1,17 +1,13 @@
-
-
 import Style from '../css/_import/hover.styl'
 
-module.exports = {
+exports.init = () => {
+    let $socials = $('.social a'),
+        $shares = $('.-mob-share div');
 
-    init: function () {
-        let $socials = $('.social a'),
-            $shares = $('.-mob-share span');
-
-        registerHoverItem($socials);
-        registerHoverItem($shares);
-    }
+    registerHoverItem($socials);
+    registerHoverItem($shares);
 }
+
 /**
  * hover时其他item颜色变淡效果
  * @param {Array}  

@@ -4,22 +4,19 @@
 
 import Utils from './utils'
 
-module.exports = {
-
-    init: function () {
-        //
-        //  触发搜索的DOM
-        //
-        $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
-            opContainer();
-        });
-    }
+exports.init = () => {
+    //
+    //  触发搜索的DOM
+    //
+    $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
+        opContainer();
+    });
 }
 
 function opContainer() {
 
     const $sc = $('.search-container');
-    let   $msk = Utils.createMask();
+    let $msk = Utils.createMask();
 
     if ($sc.is(':visible')) {
 

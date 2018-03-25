@@ -67,7 +67,14 @@ function listenerScroll() {
 
 
     let resetBackToTop = function () {
-        $(window).scrollTop() > 800 ? $backTop.show() : $backTop.hide()
+        if ($(window).scrollTop() > 800) {
+            
+            $backTop.removeClass('rightOut').addClass('leftIn')
+
+        } else if ($backTop.hasClass('leftIn')) {
+
+            $backTop.removeClass('leftIn').addClass('rightOut')
+        }
     };
 
     let resetHeader = function () {

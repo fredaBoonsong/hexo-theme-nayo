@@ -4,25 +4,23 @@
 
 import Utils from './utils.js'
 
-module.exports = {
+exports.init = () => {
 
-    init: function initSlideMenu() {
-        if (!Utils.isPc) {
-            const $toggle = $('.mobile-toggle'),
-                $menuSearch = $('.mobile-menu-search');
-            let $mask;
+    if (!Utils.isPc) {
+        const $toggle = $('.mobile-toggle'),
+            $menuSearch = $('.mobile-menu-search');
+        let $mask;
 
 
-            $toggle.click(() => {
-                $mask = Utils.createMask();
-                showMenu();
-                for (let e of [$mask, $menuSearch]) {
-                    e.click(() => {
-                        hideMenu();
-                    })
-                }
-            })
-        }
+        $toggle.click(() => {
+            $mask = Utils.createMask();
+            showMenu();
+            for (let e of [$mask, $menuSearch]) {
+                e.click(() => {
+                    hideMenu();
+                })
+            }
+        })
     }
 }
 //
