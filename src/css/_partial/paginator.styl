@@ -3,7 +3,7 @@
 	margin 8rem 0 2rem
 	font-size .95rem
 	text-align center
-	border-top 1px solid $line-clr
+	
 	border-bottom 1px solid $line-clr
 	
 .page-number,.prev,.next	
@@ -25,7 +25,6 @@
 .current
 	color $thr-clr
 
-.page-number:hover,.extend:hover
-	color $gray
-	background-color $shallow 
+.page-number,.extend
+	@extend $fade
 

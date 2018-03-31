@@ -52,14 +52,14 @@ toc:
 # 站点访问统计
 # [ analytics id ]
 baidu_analytics:
-  #636802045446222199ae541e32c8133e 
+  636802045446222199ae541e32c8133e 
 google_analytics: 
 
 # comment
 
 # disqus(https://disqus.com/)
 disqus:
-  comment: true
+  comment: false
   shortname: lemonreds
 
 # valine(https://github.com/xCss/Valine)
@@ -107,7 +107,7 @@ mathjax:
 # 底部信息
 footer:
   author: Lemon
-  since: 2017
+  since: 2018
 
 # busuanzi site count
 # 底部访客记录

@@ -33,7 +33,10 @@ function initActiveMenu() {
             break;
         }
     }
-    $('#header-menu-'.concat(activeMenuItem)).addClass(acitveClass);
+
+    let item = $('#header-menu-'.concat(activeMenuItem))
+    item.length != 0 ? item.addClass(acitveClass) : $('#header-menu-home').addClass(acitveClass)
+    
 }
 
 
@@ -68,7 +71,7 @@ function listenerScroll() {
 
     let resetBackToTop = function () {
         if ($(window).scrollTop() > 800) {
-            
+
             $backTop.removeClass('rightOut').addClass('leftIn')
 
         } else if ($backTop.hasClass('leftIn')) {

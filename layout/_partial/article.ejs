@@ -6,9 +6,16 @@
 	       
 		 <%	var date_format = config.date_format %>
 
-		 <time>Posted in <%= date(post.date,  "MMM Do YYYY") %> </time>
-		 <i class="iconfont icon-star"></i>
-		 <span>Words: <%- raw_length(post.content)%></span> 
+
+		<div class='article-meta'>
+		<span><%= date(post.date,  "MMM Do YYYY") %> </span>
+		<%if(post.tags && post.tags.length){%>
+			<i class="iconfont icon-star"></i>		 
+			<% post.tags.sort('date',-1).each(function (tag){%>            
+			<a class="article-tag" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
+			<% })%>
+		<%}%>
+		</div>
 	</div>
 
 
