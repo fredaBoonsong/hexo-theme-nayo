@@ -4,10 +4,8 @@
   margin-bottom 80px
   padding 18px 0 
   opacity 0 
-
 .article-header    
-   padding 1rem 1.5rem 
-   margin-bottom 1.5rem
+   padding 1rem 1.5rem .8rem  
    & span
      color rgba(0,0,0,0.7)  
      font-size .825rem     
@@ -16,10 +14,18 @@
       
 .article-title     
     display block      
-    font-size 2.15rem 
-    margin .4rem 0     
-    color $article-clr     
+    font-size 2.15rem      
+    color $article-clr  
+    margin-bottom 1rem   
  
+.article-meta       
+    & > span
+        display inline-block
+        padding 8px 6px 
+        line-height 60px       
+    & > .article-tag        
+        @extend $item     
+    
 
 .article-excerpt
     margin 1rem 0
@@ -39,32 +45,18 @@
     width 66px
     margin 4rem auto 0 auto
     font-size .85rem 
-    letter-spacing .8px
-    padding 8px 10px 
+    letter-spacing .5px
+    padding 7px 9px 
     border-radius 999rem
     border 1px solid  $gray
     background rgba(255,255,255,.1)
     box-sizing content-box
     text-align center
    
-
-.article-meta
-    & > span
-        display inline-block
-        padding 8px 6px
-    & > .article-tag
-        @extend $fade 
-        display inline-block 
-        padding 4px 6px
-        border 1px solid  $line-clr
-        border-radius 4px
-        margin 0 3px 0
-        font-size .85rem
-    
   
 
 .thumb
-    margin 1.5rem 1rem 0 1rem  
+    margin 0 1rem  
     @media mq-mobile 
       margin .5rem
   

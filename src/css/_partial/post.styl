@@ -3,28 +3,26 @@
 @import '../_import/valine.styl'
 
 .post-header
-  position relative
+  position relative 
+  margin 3rem 0 
   &:after
     position absolute
     content " "
-    bottom -2rem
-    left 40%
-    width 20%
+    bottom -1rem
+    left 0
+    width 80%
     height 1px
     background $line-clr
-    
-.post-title 
-  display block
-  font-size 2.6rem
-  font-weight 200
-  color rgba(0,0,0,.7)
-  margin 1rem 0 3.5rem 0   
+  & > .post-title 
+    font-size 2.5rem 
+    margin 0 0 1.5rem
+    color rgba(0,0,0,.7) 
+  & > .meta-info
+    & > span
+      margin-right 12px
 
-//
-//post
-//
 .post-content
-  margin 5.5rem 0 2rem
+  margin 2rem 0 
   & p a 
     @extend $toRight
   & p a,& li a
@@ -100,6 +98,11 @@
      
 
 
+.post-meta
+  margin 5rem 0 2rem
+  & > a
+      @extend $item
+    
 .post-footer
   width 100%
   height 160px
@@ -110,7 +113,7 @@
   justify-content space-between 
   align-items center
   padding 22px 0
-  margin 4.8rem 0 8rem
+  margin-bttom 8rem
   text-align right 
   box-sizing content-box
   & > div

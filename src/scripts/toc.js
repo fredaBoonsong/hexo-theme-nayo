@@ -18,17 +18,14 @@ function addListener() {
 	const $tc = $('.toc-contents'),
 		$tl = $('.toc-list');
 
-	//默认隐藏toc
-	$tl.hide();
 
 	$tc.click(() => {
 
 		if ($tl.is(':visible')) {
 			$tl.hide();
-			$tc.removeClass("icon-open").addClass("icon-close");
+		
 		} else {
-			$tl.show();
-			$tc.removeClass("icon-close").addClass("icon-open");
+			$tl.show();			
 		}
 	});
 }
@@ -87,8 +84,6 @@ function initToc() {
 		})
 	})
 
-	//toc 默认关闭
-	$('.toc-contents').click()
 
 }
 
@@ -99,8 +94,8 @@ function fixToc() {
 	$(window).scroll(() => {
 		let srcollTop = $(window).scrollTop();
 		srcollTop <= 10 ? resetTocFollow() : openTocFollow();
-		tocPosition();
-	});
+		tocPosition()	
+	})
 }
 
 
@@ -175,5 +170,5 @@ function getOffsetTop($obj) {
 function checkIsHideToc() {
 	const height = $(window).height(),
 		nav_height = $('.post-footer').offset().top - $(document).scrollTop();
-	return (nav_height <= height / 1.1);
+	return (nav_height <= height);
 }

@@ -5,8 +5,8 @@
     width 250px   
     height 100%
     top 16%
-    left 80%     
-    overflow hidden
+    left 79%     
+    overflow hidden	
     @media mq-mobile 
       display none
 	  
@@ -16,42 +16,43 @@
 	height 100%	
 	overflow-y auto
 .toc-contents
-	display block	
-	font-size 1rem
-	color rgba(0,0,0,.5)
+	display block
+	text-align center 	
+	padding 10px 0
+	font-size 1.1rem
+	color rgba(0,0,0,.5	)
 	cursor pointer
+	border-bottom 1px solid $line-clr
+	&:hover		
+		color $thr-clr 
+
 .toc-list
     list-style-type none    
       
 .toc-item 
-	@extend $oneline
-	padding-left 0 
-	font-size .95rem
-	margin 10px 0
+	@extend $oneline	
+	font-size .9rem	
 	color rgba(0,0,0,.8)
 	letter-spacing .5px
-.toc-item 
-	&:hover
-		cursor pointer
+	cursor pointer
+	&:hover		
 		color $thr-clr 		
 		 
 .toc-subitem 	
 	@extend $oneline
 	display block
-	font-size  .85rem
+	font-size  .8rem
 	color rgba(0,0,0,.6)
-	margin 10px 0 10px 6px	
-	
-.toc-subitem 	
-	&:hover
-		cursor pointer
+	margin 10px 0 10px 12px	
+	cursor pointer
+	&:hover		
 		color  $thr-clr 	
 
 //----------js
 .toc-fixed	
 	position fixed 
-	top 1%
-	left 80%	
+	top 2%
+	left 79%	
 	height 86%
 	
 .toc-active		

@@ -24,7 +24,7 @@
       <% }%>
 
         <div class="archive-item">
-          <span class="archive-time"> <%= date(post.date,  "MM-DD") %> </span>
+          <span class="archive-time"> <%= date(post.date,  "MMM Do") %> </span>
 
           <span class="archive-title">
           <a href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>

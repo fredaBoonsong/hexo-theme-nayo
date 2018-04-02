@@ -46,7 +46,7 @@ social:
 # toc
 # 文章的目录 仅识别 H1 和 H2/H3
 toc:
-    true
+    false
 
 # site analytics 
 # 站点访问统计

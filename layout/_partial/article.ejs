@@ -8,7 +8,9 @@
 
 
 		<div class='article-meta'>
-		<span><%= date(post.date,  "MMM Do YYYY") %> </span>
+		
+		<%= date(post.date,  "MMM DD, YYYY") %>
+
 		<%if(post.tags && post.tags.length){%>
 			<i class="iconfont icon-star"></i>		 
 			<% post.tags.sort('date',-1).each(function (tag){%>            
@@ -16,6 +18,7 @@
 			<% })%>
 		<%}%>
 		</div>
+
 	</div>
 
 
