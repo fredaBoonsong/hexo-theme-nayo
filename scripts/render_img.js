@@ -5,7 +5,9 @@ let cheerio = require('cheerio'),
 
 function renderImg(source) {
 
-    let $ = cheerio.load(source),
+    let $ = cheerio.load(source,{
+        decodeEntities: false
+    }),
         gallery = $('.gallery,.banner'),
         img = $('img');
 
@@ -45,8 +47,16 @@ function renderImg(source) {
         $(element).addClass('lazyload');
     });
 
-    return $.html();
+    
+    return decode($.html())
 }
 
+/**
+ * 解决搜索出现 &#x 的错误
+ * @param {string} str 
+ */
+function decode(str) {
+    return unescape(str.replace(/&#x/g,'%u').replace(/;/g,'')) 
+}
 
 hexo.extend.filter.register('after_render:html', renderImg);
