@@ -9,20 +9,20 @@
    & span
      color rgba(0,0,0,0.7)  
      font-size .825rem     
-   & span:before  
-     border-left 1px solid gray
+   
       
 .article-title     
     display block      
     font-size 2.15rem      
-    color $article-clr  
-    margin-bottom 1rem   
+    color $article-clr      
  
-.article-meta       
+.article-meta  
+    display flex
+    height 60px 
+    align-items center
     & > span
         display inline-block
-        padding 8px 6px 
-        line-height 60px       
+        padding 8px 6px           
     & > .article-tag        
         @extend $item     
     
