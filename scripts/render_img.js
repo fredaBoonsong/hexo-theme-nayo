@@ -5,9 +5,7 @@ let cheerio = require('cheerio'),
 
 function renderImg(source) {
 
-    let $ = cheerio.load(source,{
-        decodeEntities: false
-    }),
+    let $ = cheerio.load(source),
         gallery = $('.gallery,.banner'),
         img = $('img');
 
@@ -27,7 +25,8 @@ function renderImg(source) {
                 $(element).css('background-image', 'url("' + placeHolder + '")');
             } else {
 
-                $(element).css('background-image', 'url("' + origin + '")');
+                $(element).css('background-image', `url("${origin}")`);
+
             }
 
         }
@@ -47,7 +46,8 @@ function renderImg(source) {
         $(element).addClass('lazyload');
     });
 
-    
+
+
     return decode($.html())
 }
 
@@ -56,7 +56,7 @@ function renderImg(source) {
  * @param {string} str 
  */
 function decode(str) {
-    return unescape(str.replace(/&#x/g,'%u').replace(/;/g,'')) 
+    return unescape(str.replace(/&#x;/g, '%u'))
 }
 
 hexo.extend.filter.register('after_render:html', renderImg);

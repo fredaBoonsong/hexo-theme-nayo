@@ -34,8 +34,10 @@ pre {
 
 .highlight {
   @extend $code-block;
-  border-radius: 1px;
+  border-radius: 6px;
   position relative;
+  text-shadow 1px 2px 1px rgba(0,0,0,0.0085)
+  box-shadow 0 1px 2px rgba(0,0,0,0.05)
 
   pre {
     border: none;
@@ -50,7 +52,8 @@ pre {
   }   
 
   td {
-    border: none;
+    border: none; 
+    margin: 0 !important;
     padding: 0;
   }
 
@@ -71,7 +74,8 @@ pre {
 
   .gutter pre {
     padding-left 10px
-    padding-right 10px   
+    padding-right 10px 
+    margin 0 
     text-align right
     font-size  $number-font-size
     background-color $highlight-gutter-bgcolor 
@@ -88,7 +92,8 @@ pre {
 
   .line { 
     display: inline-block;
-    height: 22px;   
+    padding: 2px 0;
+    height: 20px;   
     border: none;
   }
     
@@ -106,13 +111,14 @@ pre {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; 
+  user-select: none;  
 }
 
 .gist table {
   width: auto;
 
-  td { border: none; }
+  td { 
+    border: none; }
 }
 
 
