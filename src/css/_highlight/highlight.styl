@@ -47,7 +47,7 @@ pre {
 
   table {
     margin: 0px;
-    width: auto;
+    width: 100%;
     border: none;
   }   
 
@@ -191,3 +191,43 @@ pre {
     color: $highlight-red;
   }
 }
+
+//---------------------------------
+
+.code
+  position relative   
+  &:after
+    position: absolute
+    top: 0
+    right 0
+    color: #ccc  
+    content: "Code"
+    font-size: 12px
+    padding: 5px 10px 0
+    height: 15px  
+ 
+.highlight 
+  &.code .code:after
+    content "Code"
+  &.html .code:after
+    content "HTML"
+  &.javascript .code:after
+    content "JS"
+  &.js .code:after
+    content "JS"
+  &.bash .code:after
+    content "Shell"
+  &.css .code:after
+    content "CSS" 
+  &.sass .code:after
+    content "SASS"
+  &.less .code:after
+    content "LESS"
+  &.styl .code:after
+    content "Styl" 
+  &.java .code:after
+    content "Java"  
+  &.c++ .code:after
+    content "C++"
+  &.c .code:after
+    content "C"  

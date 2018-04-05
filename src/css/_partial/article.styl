@@ -39,18 +39,19 @@
       &:hover    
         color $main-clr !important  
 
-.article-readmore  
-    @extend $fade
-    display block
-    width 66px
-    margin 4rem auto 0 auto
-    font-size .85rem 
-    letter-spacing .5px
-    padding 8px 10px 
-    border-radius 40px
-    border-bottom 2px solid  $gray      
-    box-sizing content-box
+
+.article-bottom
     text-align center
+    margin 4rem auto 0 auto
+    & .article-readmore  
+        @extend $fade        
+        font-size .85rem 
+        letter-spacing .5px
+        padding 10px 12px 
+        border-radius 40px
+        border-bottom 1px solid  $gray      
+        box-sizing content-box
+        text-align center
    
   
 
