@@ -46,14 +46,14 @@ pre {
   }
 
   table {
-    margin: 0px;
-    width: 100%;
+    margin: 0;
+    width: auto;
     border: none;
+
   }   
 
   td {
     border: none; 
-    margin: 0 !important;
     padding: 0;
   }
 
@@ -74,9 +74,9 @@ pre {
 
   .gutter pre {
     padding-left 10px
-    padding-right 10px 
-    margin 0 
-    text-align right
+    padding-right 10px
+    margin 0     
+    text-align right       
     font-size  $number-font-size
     background-color $highlight-gutter-bgcolor 
     color $highlight-gutter-color
@@ -96,7 +96,7 @@ pre {
     height: 20px;   
     border: none;
   }
-    
+   
 
   .marked{
     width: 100%
@@ -194,8 +194,9 @@ pre {
 
 //---------------------------------
 
-.code
-  position relative   
+.highlight
+  position relative  
+  width 100% 
   &:after
     position: absolute
     top: 0
@@ -207,27 +208,27 @@ pre {
     height: 15px  
  
 .highlight 
-  &.code .code:after
+  &.code .highlight:after
     content "Code"
-  &.html .code:after
+  &.html .highlight:after
     content "HTML"
-  &.javascript .code:after
+  &.javascript .highlight:after
     content "JS"
-  &.js .code:after
+  &.js .highlight:after
     content "JS"
-  &.bash .code:after
+  &.bash .highlight:after
     content "Shell"
-  &.css .code:after
+  &.css .highlight:after
     content "CSS" 
-  &.sass .code:after
+  &.sass .highlight:after
     content "SASS"
-  &.less .code:after
+  &.less .highlight:after
     content "LESS"
-  &.styl .code:after
+  &.styl .highlight:after
     content "Styl" 
-  &.java .code:after
+  &.java .highlight:after
     content "Java"  
-  &.c++ .code:after
+  &.c++ .highlight:after
     content "C++"
-  &.c .code:after
+  &.c .highlight:after
     content "C"  
