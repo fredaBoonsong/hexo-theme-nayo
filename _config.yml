@@ -4,7 +4,6 @@
 menu:
   home: /
   archives: archives
-#  categories: categories  
   tags: tags
   about: about
   search: search
@@ -23,7 +22,6 @@ profile:
   logo: Nayo
   author: Lemon
   avatar: /images/header.jpg  
-  location: GuangZhou CN
   description: hi,i am lemon
 
 # site favicon
@@ -33,14 +31,13 @@ favicon: /images/favicon.png
 
 # social link
 social:  
-  Github: https://github.com/Lemonreds  
-  Zhihu:
+  Github: https://github.com/Lemonreds    
   Weibo:
+# Zhihu:
   Facebook:
   Twitter:
   Instagram:
   LinkedIn:
-  Others:
 
 
 # toc
@@ -109,12 +106,7 @@ footer:
   author: Lemon
   since: 2018
 
-# busuanzi site count
-# 底部访客记录
-busuanzi:
-  false
-
 
 #theme version
 version:
-  0.1.8
+  0.1.9

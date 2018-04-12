@@ -73,3 +73,7 @@
 
 ### Added
 - 代码类型提示
+
+### Remove
+- busuanzi
+- category page

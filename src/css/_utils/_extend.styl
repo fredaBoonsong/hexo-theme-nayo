@@ -12,7 +12,7 @@ $tags
   display inline-block
   line-height 1.825rem
   font-size 0.825rem
-  border 1px solid  $border-clr 
+  border 1px solid  $tag-clr 
   border-radius 999em 
   transition all .2s ease
   &:visited,&:active,&:link
@@ -22,11 +22,9 @@ $tags
     color $thr-clr
     border 1px solid $thr-clr    
    
-$fade
+$fade  
    &:hover
-      background-color $shallow   !important	    
-   &:hover
-      color $white !important	 
+      border 1px solid rgba($thr-clr,.5)
         
 $item
     @extend $fade 
@@ -65,22 +63,12 @@ $tips
     margin-left -80px
     font-size 16.5px
     box-sizing border-box
-    color #fafafa !important
-    background #565656
+    color #ffff !important
+    background #40484a
     text-shadow 0 -1px 0 rgba(0,0,0,1)    
     border-radius 4px 
     text-align center
 
-$tips-min    
-    @extends $tips 
-    &:hover:before   
-      border 6px solid transparent
-      border-top 6px solid #565656 
-      margin-left -3px  
-    &:hover:after
-      width 88px
-      margin-left -44px
-      font-size 16px
 
    
 @keyframes tipsAnimation
