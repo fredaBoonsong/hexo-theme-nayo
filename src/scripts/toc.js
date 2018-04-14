@@ -6,7 +6,6 @@ import Utils from './utils'
 
 exports.init = () => {
 
-
 	initToc();
 	addListener();
 	fixToc();
@@ -23,9 +22,9 @@ function addListener() {
 
 		if ($tl.is(':visible')) {
 			$tl.hide();
-		
+
 		} else {
-			$tl.show();			
+			$tl.show();
 		}
 	});
 }
@@ -94,7 +93,7 @@ function fixToc() {
 	$(window).scroll(() => {
 		let srcollTop = $(window).scrollTop();
 		srcollTop <= 10 ? resetTocFollow() : openTocFollow();
-		tocPosition()	
+		tocPosition()
 	})
 }
 

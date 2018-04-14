@@ -2,12 +2,12 @@
 
 	   <% var  date_format = config.date_format  %>
 
-	   <div class="item slideDownMin">   	
+	   <article class="item slideDownMin">   	
 
-        <span class="item-date"> <%= date(post.date, date_format || 'MMM Do, YYYY' ) %></span>    
+        <time class="item-date"> <%= date(post.date, date_format || 'MMM Do, YYYY' ) %></time>    
 
         <a class="item-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
 
-      </div>
+      </article>
 
 <% } %>
