@@ -47,10 +47,12 @@
   
 
 .thumb
-    margin 0 1rem  
+    margin 0 .8rem  
+    display flex   
     @media mq-mobile 
+      flex-wrap wrap
       margin .5rem
-  
+
  
 .banner    
     position relative
@@ -65,15 +67,29 @@
       width 100%
       max-height 12rem
 
+
+  
+.gallery-thumb 
+    margin 0 .8rem  
+    display flex   
+    @media mq-mobile 
+      flex-wrap wrap
+      margin .5rem
+      
 .gallery  
-    border-radius 2px
-    display inline-block
-    width 11.24rem
-    height 11.24rem   
+    border-radius 2px    
+    box-sizing border-box
+    width 25%
+    margin 0 .1rem   
     background-size cover
     background-position center
     background-repeat no-repeat
+    &:before 
+        content ""
+        display inline-block
+        padding-bottom 100%
     @media mq-mobile
-      margin-bottom .5rem
-      width 48%
-      height 10rem 
+      width 45%
+      margin-bottom .1rem
+      
+      
