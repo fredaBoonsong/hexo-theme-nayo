@@ -1,11 +1,12 @@
 let cheerio = require('cheerio'),
-    placeHolder = '/images/placeholder.gif',
-    startedLoad = 3;
-
+    placeHolder = '/images/placeholder.gif';
+  
 
 function renderImg(source) {
 
-    let $ = cheerio.load(source),
+    let $ = cheerio.load(source, {
+            decodeEntities: false
+        }),
         gallery = $('.gallery,.banner'),
         img = $('img');
 
@@ -14,25 +15,18 @@ function renderImg(source) {
         let origin = $(element).attr('data-origin');
 
         if (origin && origin !== placeHolder) {
+       
 
-            if (idx >= startedLoad) {
-
-                $(element).attr({
-                    'data-src': origin
-                });
-
-                $(element).addClass('lazyload');
-                $(element).css('background-image', 'url("' + placeHolder + '")');
-            } else {
-
-                $(element).css('background-image', `url("${origin}")`);
-
-            }
-
+            $(element).attr({
+                'data-src': origin
+            });
+            $(element).css('background-image', `url("${placeHolder}")`);
+            $(element).addClass('lazyload');
+           
         }
     });
 
-    img.slice(startedLoad).each((idx, element) => {
+    img.each((idx, element) => {
 
         let src = $(element).attr('src');
 
@@ -48,15 +42,9 @@ function renderImg(source) {
 
 
 
-    return decode($.html())
+    return $.html()
 }
 
-/**
- * 解决搜索出现 &#x 的错误
- * @param {string} str 
- */
-function decode(str) {
-    return unescape(str.replace(/&#x;/g, '%u'))
-}
+
 
 hexo.extend.filter.register('after_render:html', renderImg);
