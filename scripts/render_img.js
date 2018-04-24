@@ -1,6 +1,6 @@
 let cheerio = require('cheerio'),
     placeHolder = '/images/placeholder.gif';
-  
+
 
 function renderImg(source) {
 
@@ -15,14 +15,14 @@ function renderImg(source) {
         let origin = $(element).attr('data-origin');
 
         if (origin && origin !== placeHolder) {
-       
+
 
             $(element).attr({
                 'data-src': origin
             });
             $(element).css('background-image', `url("${placeHolder}")`);
             $(element).addClass('lazyload');
-           
+
         }
     });
 
@@ -40,11 +40,7 @@ function renderImg(source) {
         $(element).addClass('lazyload');
     });
 
-
-
     return $.html()
 }
-
-
 
 hexo.extend.filter.register('after_render:html', renderImg);
