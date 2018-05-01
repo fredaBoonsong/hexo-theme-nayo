@@ -1,5 +1,5 @@
 let cheerio = require('cheerio'),
-    placeHolder = '/images/placeholder.gif';
+    placeHolder = '/images/placeholder.png';
 
 
 function renderImg(source) {
@@ -15,14 +15,13 @@ function renderImg(source) {
         let origin = $(element).attr('data-origin');
 
         if (origin && origin !== placeHolder) {
-
-
-            $(element).attr({
-                'data-src': origin
-            });
-            $(element).css('background-image', `url("${placeHolder}")`);
-            $(element).addClass('lazyload');
-
+           
+                $(element).attr({
+                    'data-src': origin
+                });
+                $(element).css('background-image', `url("${placeHolder}")`);
+                $(element).addClass('lazyload');
+           
         }
     });
 
