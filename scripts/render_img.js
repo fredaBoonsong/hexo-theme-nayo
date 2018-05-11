@@ -1,4 +1,5 @@
 let cheerio = require('cheerio'),
+    loadedImage = 4,
     placeHolder = '/images/placeholder.png';
 
 
@@ -10,33 +11,35 @@ function renderImg(source) {
         gallery = $('.gallery,.banner'),
         img = $('img');
 
+
     gallery.each((idx, element) => {
 
         let origin = $(element).attr('data-origin');
 
         if (origin && origin !== placeHolder) {
-           
-                $(element).attr({
-                    'data-src': origin
-                });
-                $(element).css('background-image', `url("${placeHolder}")`);
-                $(element).addClass('lazyload');
-           
+
+            $(element).attr({
+                'data-src': origin
+            });
+            $(element).css('background-image', `url("${placeHolder}")`);
+            $(element).addClass('lazyload');
         }
     });
 
     img.each((idx, element) => {
 
-        let src = $(element).attr('src');
+        if (idx > loadedImage) {
+            let src = $(element).attr('src');
 
-        if (src && src !== placeHolder) {
-            $(element).attr({
-                'data-src': src,
-                'src': placeHolder
-            });
+            if (src && src !== placeHolder) {
+                $(element).attr({
+                    'data-src': src,
+                    'src': placeHolder
+                });
+            }
+            $(element).addClass('lazyload');
         }
 
-        $(element).addClass('lazyload');
     });
 
     return $.html()
