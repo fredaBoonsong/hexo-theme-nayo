@@ -19,7 +19,7 @@ title: Nayo
 # 作者信息
 # author为空时 Hexo/_config.yml 配置有效
 profile: 
-  logo: Nayo
+  #logo: Nayo
   author: Lemon
   avatar: /images/header.jpg  
   description: hi,i am lemon
@@ -112,6 +112,7 @@ footer:
   since: 2018
 
 
-#theme version
+# theme version
+
 version:
-  0.2.0
+  0.2.1
