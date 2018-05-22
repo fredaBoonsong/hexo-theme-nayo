@@ -72,7 +72,7 @@
 ### Added
 - 代码类型提示
 
-### Removeed
+### Removed
 - busuanzi
 - category page
 
@@ -92,3 +92,9 @@
 
 ### Fixed
 - header显示错误
+
+## [0.2.2] 20180522
+
+### Removed
+- 删除li前面的符号
+
